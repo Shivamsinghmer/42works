@@ -1,0 +1,176 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { MobileNav } from "@/components/mobile-nav";
+import { Button } from "@/components/ui/button";
+import { useScroll } from "@/hooks/use-scroll";
+import { cn } from "@/lib/utils";
+import { CENTER_LINKS, SERVICE_GROUPS, INDUSTRIES_LINKS } from "@/components/navigation-data";
+
+export const navLinks = CENTER_LINKS;
+
+export function Header() {
+  const scrolled = useScroll(10);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [industriesMenuOpen, setIndustriesMenuOpen] = useState(false);
+  const [activeServiceLabel, setActiveServiceLabel] = useState(
+    SERVICE_GROUPS[0].label
+  );
+
+  const activeServiceGroup = useMemo(
+    () =>
+      SERVICE_GROUPS.find((group) => group.label === activeServiceLabel) ??
+      SERVICE_GROUPS[0],
+    [activeServiceLabel]
+  );
+
+  const handleServicesEnter = () => {
+    setMenuOpen(true);
+    setActiveServiceLabel(SERVICE_GROUPS[0].label);
+  };
+
+  return (
+    <header
+      className={cn(
+        "sticky top-0 z-50 mx-auto w-full max-w-6xl rounded-2xl border border-white/10 backdrop-blur-md transition-all duration-300 ease-out",
+        {
+          "border-white/20 bg-black/60 shadow-[0_12px_32px_rgba(0,0,0,0.4)]":
+            scrolled,
+        }
+      )}
+    >
+      <nav
+        className="flex h-14 w-full items-center justify-between px-4"
+      >
+        <motion.a
+          className="inline-flex items-center gap-2 rounded-md p-2 hover:bg-white/10"
+          href="#"
+          whileHover={{ scale: 1.03 }}
+          transition={{ type: "spring", stiffness: 380, damping: 26 }}
+        >
+          <span className="text-sm font-bold tracking-[0.14em] text-white">
+            42works
+          </span>
+        </motion.a>
+        <div className="hidden items-center gap-1 md:flex">
+          <div className="relative" onMouseEnter={handleServicesEnter} onMouseLeave={() => setMenuOpen(false)}>
+            <Button size="sm" variant="ghost" className="text-xs text-white/85 transition-colors hover:bg-white/10 hover:text-white">
+              Services
+            </Button>
+
+            <AnimatePresence>
+              {menuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.18, ease: "easeOut" }}
+                  className="absolute left-1/2 top-full z-[60] w-[720px] -translate-x-1/2 pt-3"
+                >
+                  <div className="rounded-2xl border border-white/20 bg-black/95 p-2 shadow-2xl backdrop-blur-xl">
+                    <div className="grid grid-cols-[290px_1fr] gap-2">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-2">
+                    {SERVICE_GROUPS.map((group) => (
+                      <motion.button
+                        key={group.label}
+                        type="button"
+                        onMouseEnter={() => setActiveServiceLabel(group.label)}
+                        whileHover={{ x: 3 }}
+                        className={cn(
+                          "flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm transition",
+                          activeServiceLabel === group.label
+                            ? "bg-white text-black"
+                            : "text-white/85 hover:bg-white/10"
+                        )}
+                      >
+                        <span>{group.label}</span>
+                        <span aria-hidden="true">›</span>
+                      </motion.button>
+                    ))}
+                  </div>
+
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+                    <p className="mb-3 text-sm font-semibold text-white">
+                      {activeServiceGroup.label}
+                    </p>
+                    <div className="grid grid-cols-1 gap-2">
+                      {activeServiceGroup.services.map((service) => (
+                        <motion.a
+                          key={service}
+                          href="#"
+                          whileHover={{ x: 4 }}
+                          className="rounded-md px-3 py-2 text-sm text-white/80 transition hover:bg-white/10 hover:text-white"
+                        >
+                          {service}
+                        </motion.a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <div className="relative" onMouseEnter={() => setIndustriesMenuOpen(true)} onMouseLeave={() => setIndustriesMenuOpen(false)}>
+            <Button size="sm" variant="ghost" className="text-xs text-white/85 transition-colors hover:bg-white/10 hover:text-white">
+              Industries
+            </Button>
+
+            <AnimatePresence>
+              {industriesMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.18, ease: "easeOut" }}
+                  className="absolute left-1/2 top-full z-[60] w-[320px] -translate-x-1/2 pt-3"
+                >
+                  <div className="rounded-2xl border border-white/20 bg-black/95 p-2 shadow-2xl backdrop-blur-xl">
+                    <div className="rounded-lg border border-white/10 bg-white/5 p-2">
+                    {INDUSTRIES_LINKS.map((industry) => (
+                      <motion.button
+                        key={industry}
+                        type="button"
+                        whileHover={{ x: 3 }}
+                        className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm transition text-white/85 hover:bg-white/10 hover:text-white"
+                      >
+                        {industry}
+                      </motion.button>
+                    ))}
+                  </div>
+                </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {CENTER_LINKS.map((link) => (
+            <Button
+              asChild
+              key={link.label}
+              size="sm"
+              variant="ghost"
+              className="text-xs text-white/85 hover:bg-white/10 hover:text-white"
+            >
+              <a href={link.href}>{link.label}</a>
+            </Button>
+          ))}
+        </div>
+
+        <div className="hidden items-center md:flex">
+          <Button
+            size="sm"
+            asChild
+            className="bg-white text-black hover:bg-white/90"
+          >
+            <a href="#book-a-call">Book a Call</a>
+          </Button>
+        </div>
+        <MobileNav />
+      </nav>
+    </header>
+  );
+}
