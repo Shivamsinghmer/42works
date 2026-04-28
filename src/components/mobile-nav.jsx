@@ -21,7 +21,7 @@ export function MobileNav() {
         aria-controls="mobile-menu"
         aria-expanded={open}
         aria-label="Toggle menu"
-        className="border-white/20 bg-black/45 text-white hover:bg-white/10 md:hidden"
+        className="border-slate-200 bg-white text-slate-900 hover:bg-slate-50 md:hidden"
         onClick={() => setOpen(!open)}
         size="icon"
         variant="outline"
@@ -65,14 +65,14 @@ export function MobileNav() {
             )}
             data-slot={open ? "open" : "closed"}
           >
-            <div className="mx-auto grid w-full max-w-md gap-y-2 rounded-2xl border border-white/15 bg-black/60 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl">
-              <div className="rounded-lg border border-white/10 bg-white/5 p-2">
-                <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white/70">
+            <div className="mx-auto grid w-full max-w-md gap-y-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_50px_rgba(2,6,23,0.08)] backdrop-blur-xl">
+              <div className="rounded-lg border border-slate-100 bg-white p-2">
+                <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Services
                 </p>
                 {SERVICE_GROUPS.map((group) => (
                   <details key={group.label} className="rounded-md">
-                    <summary className="cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-white/90 hover:bg-white/10">
+                    <summary className="cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50">
                       {group.label}
                     </summary>
                     <div className="mt-1 grid gap-y-1 pl-3">
@@ -81,7 +81,7 @@ export function MobileNav() {
                           key={service}
                           href="#"
                           onClick={closeMenu}
-                          className="rounded-md px-2 py-1.5 text-sm text-white/75 hover:bg-white/10 hover:text-white"
+                          className="rounded-md px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                         >
                           {service}
                         </a>
@@ -91,8 +91,8 @@ export function MobileNav() {
                 ))}
               </div>
 
-              <div className="rounded-lg border border-white/10 bg-white/5 p-2">
-                <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-white/70">
+              <div className="rounded-lg border border-slate-100 bg-white p-2">
+                <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Industries
                 </p>
                 <div className="grid gap-y-1">
@@ -101,7 +101,7 @@ export function MobileNav() {
                       key={industry}
                       href="#"
                       onClick={closeMenu}
-                      className="rounded-md px-2 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
+                      className="rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                     >
                       {industry}
                     </a>
@@ -110,13 +110,13 @@ export function MobileNav() {
               </div>
 
               {CENTER_LINKS.map((link) => (
-                <Button asChild className="justify-start text-white/90 hover:bg-white/10 hover:text-white" key={link.label} variant="ghost">
+                <Button asChild className="justify-start text-slate-600 hover:bg-slate-50 hover:text-slate-900" key={link.label} variant="ghost">
                   <a href={link.href} onClick={closeMenu}>{link.label}</a>
                 </Button>
               ))}
 
               <div className="mt-2 flex flex-col gap-2">
-              <Button asChild className="w-full bg-white text-black hover:bg-white/90">
+              <Button asChild className="w-full bg-sky-700 text-white hover:bg-sky-800">
                 <a href="#book-a-call" onClick={closeMenu}>Book a Call</a>
               </Button>
               </div>
