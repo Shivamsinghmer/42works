@@ -104,23 +104,15 @@ export function FundamentalsSection() {
           <div className="relative mx-auto mt-14 h-[18rem] w-full max-w-4xl overflow-hidden rounded-t-[999px] border border-white/55 bg-[radial-gradient(circle_at_50%_20%,#4cc5ff_0%,#3b82f6_32%,#4f46e5_68%,#1d4ed8_100%)] shadow-[0_35px_90px_rgba(30,64,175,0.35)] md:h-[20rem]">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.28)_0%,transparent_58%)]" />
 
-            <motion.div
-              className="absolute left-1/2 top-7 z-10 -translate-x-1/2 md:top-8"
-              animate={{ y: [0, -7, 0] }}
-              transition={{ duration: 3.4, repeat: Infinity, ease: "easeInOut" }}
-            >
+            <div className="absolute left-1/2 top-7 z-10 -translate-x-1/2 md:top-8">
               <FloatingIcon>
                 <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
                 </svg>
               </FloatingIcon>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="absolute left-[17%] top-[38%] z-10"
-              animate={{ y: [0, -9, 0] }}
-              transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
-            >
+            <div className="absolute left-[17%] top-[38%] z-10">
               <FloatingIcon>
                 <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
@@ -128,17 +120,13 @@ export function FundamentalsSection() {
               </FloatingIcon>
             </div>
 
-            <motion.div
-              className="absolute right-[17%] top-[38%] z-10"
-              animate={{ y: [0, -11, 0] }}
-              transition={{ duration: 4.1, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            >
+            <div className="absolute right-[17%] top-[38%] z-10">
               <FloatingIcon>
                 <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
                 </svg>
               </FloatingIcon>
-            </motion.div>
+            </div>
 
             <div className="pointer-events-none absolute left-1/2 top-[56%] h-44 w-[72%] -translate-x-1/2 rounded-full bg-cyan-300/22 blur-3xl" />
             <div className="pointer-events-none absolute left-1/2 top-[56%] h-44 w-[72%] -translate-x-1/2 rounded-full border border-white/20" />

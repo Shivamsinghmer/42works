@@ -1,8 +1,6 @@
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "@/components/providers/LenisProvider";
-import { CustomCursor } from "@/components/ui/CustomCursor";
-import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
 
 const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
@@ -30,8 +28,6 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col font-sans">
         <LenisProvider>
-          <ScrollProgressBar />
-          <CustomCursor />
           <div className="grain-overlay" aria-hidden="true" />
           {children}
         </LenisProvider>
