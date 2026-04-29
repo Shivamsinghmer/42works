@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --surface: #f1fbff;
+  --background: #f5f7ff;
+  --surface: #f8fbff;
   --foreground: #0f172a;
   --muted: #475569;
-  --accent-blue: #0369a1;
-  --accent-green: #10b981;
-  --glass: rgba(255,255,255,0.6);
-  --glass-strong: rgba(255,255,255,0.9);
+  --accent-blue: #4f46e5;
+  --accent-green: #0d9488;
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-strong: rgba(255, 255, 255, 0.86);
 }
 
 @theme inline {
@@ -20,7 +20,11 @@
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.16), transparent 32%),
+    radial-gradient(circle at 90% 0%, rgba(99, 102, 241, 0.2), transparent 38%),
+    radial-gradient(circle at 50% 100%, rgba(13, 148, 136, 0.14), transparent 42%),
+    var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
 }
@@ -36,7 +40,8 @@ body {
 }
 
 /* Smooth scroll overrides for Lenis */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -82,6 +87,7 @@ html.lenis, html.lenis body {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -107,8 +113,53 @@ html.lenis, html.lenis body {
   background: var(--background);
 }
 
+.page-root {
+  position: relative;
+  isolation: isolate;
+}
+
+.splash-cursor-active,
+.splash-cursor-active * {
+  cursor: none !important;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.06;
+  background-image:
+    radial-gradient(rgba(15, 23, 42, 0.28) 0.5px, transparent 0.5px),
+    radial-gradient(rgba(15, 23, 42, 0.22) 0.5px, transparent 0.5px);
+  background-position: 0 0, 12px 12px;
+  background-size: 24px 24px;
+}
+
+.nav-link-underline {
+  position: relative;
+}
+
+.nav-link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.22rem;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms ease;
+  background: currentColor;
+  opacity: 0.75;
+}
+
+.nav-link-underline:hover::after {
+  transform: scaleX(1);
+}
+
 /* Selection style */
 ::selection {
-  background-color: rgba(3, 105, 161, 0.15);
+  background-color: rgba(79, 70, 229, 0.2);
   color: inherit;
 }

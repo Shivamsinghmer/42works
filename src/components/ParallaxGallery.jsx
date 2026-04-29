@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { Reveal } from "@/components/ui/Reveal";
 
 const images = [
   "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
@@ -43,41 +44,45 @@ export function ParallaxGallery() {
   }, []);
 
   return (
-    <section className="bg-white">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#f2f6ff_55%,#f8fbff_100%)]">
       {/* Text above gallery */}
       <div className="flex h-[60vh] items-center justify-center px-6 md:px-20">
-        <h2 className="reveal-up font-heading text-4xl md:text-6xl font-bold text-slate-900 tracking-tight text-center max-w-4xl">
-          <span className="font-light">Our deep product and experience engineering roots</span>{" "}
-          make us uniquely equipped to turn ideas into reality.
-        </h2>
+        <Reveal>
+          <h2 className="max-w-4xl rounded-[2rem] border border-white/70 bg-white/70 px-6 py-8 text-center font-heading text-4xl font-bold tracking-tight text-slate-900 shadow-[0_20px_60px_rgba(79,70,229,0.12)] backdrop-blur-md md:px-12 md:text-6xl">
+            <span className="font-light">Our deep product and experience engineering roots</span>{" "}
+            make us uniquely equipped to turn ideas into reality.
+          </h2>
+        </Reveal>
       </div>
 
       {/* Parallax gallery */}
-      <div
-        ref={gallery}
-        className="relative box-border flex h-[175vh] gap-[2vw] overflow-hidden p-[2vw]"
-      >
-        <Column
-          images={[images[0], images[1], images[2]]}
-          y={y1}
-          topOffset="-45%"
-        />
-        <Column
-          images={[images[3], images[4], images[5]]}
-          y={y2}
-          topOffset="-95%"
-        />
-        <Column
-          images={[images[6], images[7], images[8]]}
-          y={y3}
-          topOffset="-45%"
-        />
-        <Column
-          images={[images[9], images[10], images[11]]}
-          y={y4}
-          topOffset="-75%"
-        />
-      </div>
+      <Reveal delay={0.08}>
+        <div
+          ref={gallery}
+          className="relative box-border flex h-[175vh] gap-[2vw] overflow-hidden p-[2vw]"
+        >
+          <Column
+            images={[images[0], images[1], images[2]]}
+            y={y1}
+            topOffset="-45%"
+          />
+          <Column
+            images={[images[3], images[4], images[5]]}
+            y={y2}
+            topOffset="-95%"
+          />
+          <Column
+            images={[images[6], images[7], images[8]]}
+            y={y3}
+            topOffset="-45%"
+          />
+          <Column
+            images={[images[9], images[10], images[11]]}
+            y={y4}
+            topOffset="-75%"
+          />
+        </div>
+      </Reveal>
 
       {/* Spacer after gallery */}
       <div className="h-[30vh]" />
@@ -92,14 +97,11 @@ function Column({ images, y, topOffset }) {
       style={{ y, top: topOffset }}
     >
       {images.map((src, i) => (
-        <div
-          key={i}
-          className="relative h-full w-full overflow-hidden rounded-xl"
-        >
+        <div key={i} className="relative h-full w-full overflow-hidden rounded-2xl border border-white/50 shadow-[0_18px_45px_rgba(15,23,42,0.12)]">
           <img
             src={src}
             alt={`Gallery image ${i + 1}`}
-            className="pointer-events-none h-full w-full object-cover"
+            className="pointer-events-none h-full w-full object-cover transition duration-500 hover:scale-105"
             loading="lazy"
           />
         </div>

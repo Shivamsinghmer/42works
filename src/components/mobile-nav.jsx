@@ -21,7 +21,7 @@ export function MobileNav() {
         aria-controls="mobile-menu"
         aria-expanded={open}
         aria-label="Toggle menu"
-        className="border-slate-200 bg-white text-slate-900 hover:bg-slate-50 md:hidden"
+        className="border-white/70 bg-white/80 text-slate-900 shadow-[0_8px_20px_rgba(79,70,229,0.18)] backdrop-blur-md hover:bg-white md:hidden"
         onClick={() => setOpen(!open)}
         size="icon"
         variant="outline"
@@ -65,14 +65,14 @@ export function MobileNav() {
             )}
             data-slot={open ? "open" : "closed"}
           >
-            <div className="mx-auto grid w-full max-w-md gap-y-2 rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_50px_rgba(2,6,23,0.08)] backdrop-blur-xl">
-              <div className="rounded-lg border border-slate-100 bg-white p-2">
+            <div className="mx-auto grid w-full max-w-md gap-y-2 rounded-2xl border border-white/70 bg-[linear-gradient(145deg,rgba(255,255,255,0.95),rgba(244,248,255,0.92))] p-3 shadow-[0_26px_60px_rgba(15,23,42,0.18)] backdrop-blur-xl">
+              <div className="rounded-lg border border-slate-100 bg-white/90 p-2">
                 <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Services
                 </p>
                 {SERVICE_GROUPS.map((group) => (
                   <details key={group.label} className="rounded-md">
-                    <summary className="cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-slate-900 hover:bg-slate-50">
+                    <summary className="cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-slate-900 hover:bg-indigo-50/70">
                       {group.label}
                     </summary>
                     <div className="mt-1 grid gap-y-1 pl-3">
@@ -81,7 +81,7 @@ export function MobileNav() {
                           key={service}
                           href="#"
                           onClick={closeMenu}
-                          className="rounded-md px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                          className="rounded-md px-2 py-1.5 text-sm text-slate-600 hover:bg-indigo-50/70 hover:text-slate-900"
                         >
                           {service}
                         </a>
@@ -91,7 +91,7 @@ export function MobileNav() {
                 ))}
               </div>
 
-              <div className="rounded-lg border border-slate-100 bg-white p-2">
+              <div className="rounded-lg border border-slate-100 bg-white/90 p-2">
                 <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
                   Industries
                 </p>
@@ -101,7 +101,7 @@ export function MobileNav() {
                       key={industry}
                       href="#"
                       onClick={closeMenu}
-                      className="rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                      className="rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-indigo-50/70 hover:text-slate-900"
                     >
                       {industry}
                     </a>
@@ -110,13 +110,13 @@ export function MobileNav() {
               </div>
 
               {CENTER_LINKS.map((link) => (
-                <Button asChild className="justify-start text-slate-600 hover:bg-slate-50 hover:text-slate-900" key={link.label} variant="ghost">
+                <Button asChild className="justify-start text-slate-700 hover:bg-indigo-50/70 hover:text-slate-900" key={link.label} variant="ghost">
                   <a href={link.href} onClick={closeMenu}>{link.label}</a>
                 </Button>
               ))}
 
               <div className="mt-2 flex flex-col gap-2">
-              <Button asChild className="w-full bg-sky-700 text-white hover:bg-sky-800">
+              <Button asChild className="w-full bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_12px_30px_rgba(79,70,229,0.35)] transition hover:brightness-110">
                 <a href="#book-a-call" onClick={closeMenu}>Book a Call</a>
               </Button>
               </div>

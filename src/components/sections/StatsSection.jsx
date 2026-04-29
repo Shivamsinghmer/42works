@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import { Reveal } from "@/components/ui/Reveal";
 
 function AnimatedCounter({ target, suffix = "", duration = 2000 }) {
   const [count, setCount] = useState(0);
@@ -40,22 +41,29 @@ const stats = [
 
 export function StatsSection() {
   return (
-    <section className="py-20 md:py-28 px-6 md:px-12 lg:px-24 bg-slate-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="reveal-up font-heading text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-          Data-first, Design-led
-        </h2>
-        <p className="reveal-up text-slate-400 text-center text-lg max-w-2xl mx-auto mb-16">
-          We help enterprises go beyond proofs of concept and deploy AI at scale, in real products, real workflows, and real business outcomes.
-        </p>
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#0f172a_0%,#111b37_55%,#172554_100%)] px-6 py-20 md:px-12 md:py-28 lg:px-24">
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(148,163,184,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.18)_1px,transparent_1px)] [background-size:36px_36px]" />
+      <div className="relative mx-auto max-w-6xl">
+        <Reveal>
+          <h2 className="mb-4 text-center font-heading text-3xl font-bold text-white md:text-4xl">
+            Data-first, Design-led
+          </h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-300">
+            We help enterprises go beyond proofs of concept and deploy AI at scale, in real products, real workflows, and real business outcomes.
+          </p>
+        </Reveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-          {stats.map((stat) => (
-            <div key={stat.label} className="reveal-up text-center">
-              <div className="font-heading text-4xl md:text-5xl font-bold text-white mb-2">
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+          {stats.map((stat, index) => (
+            <Reveal key={stat.label} delay={0.14 + index * 0.08}>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-6 text-center backdrop-blur-sm">
+                <div className="mb-2 bg-gradient-to-r from-indigo-300 via-cyan-200 to-teal-200 bg-clip-text font-heading text-4xl font-bold text-transparent md:text-5xl">
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                </div>
+                <p className="text-sm text-slate-300">{stat.label}</p>
               </div>
-              <p className="text-sm text-slate-400">{stat.label}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
