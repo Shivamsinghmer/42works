@@ -125,7 +125,7 @@ export default function CiklumPage() {
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 380, damping: 26 }}
             >
-              Let&apos;s Begin Together
+              Get an AI Audit Today
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">→</span>
             </motion.a>
           </Reveal>

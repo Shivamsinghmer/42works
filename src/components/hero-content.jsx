@@ -56,15 +56,15 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
           >
-            We make
+            Build faster.
           </motion.span>
           <motion.span
-              className="block bg-[linear-gradient(90deg,#4338ca_0%,#0ea5e9_45%,#059669_100%)] bg-clip-text text-transparent drop-shadow-none"
+            className="block bg-[linear-gradient(90deg,#4338ca_0%,#0ea5e9_45%,#059669_100%)] bg-clip-text text-transparent drop-shadow-none"
             initial={{ opacity: 0, y: 28, filter: "blur(12px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.38, ease: "easeOut" }}
           >
-            AI visibility measurable
+            Scale smarter with AI.
           </motion.span>
           <motion.span
             className="block text-slate-900"
@@ -72,40 +72,47 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.56, ease: "easeOut" }}
           >
-            for every client
+            Ship what matters.
           </motion.span>
         </h1>
 
         <p
           data-hero="description"
-          className="mt-5 max-w-3xl text-pretty text-sm leading-relaxed text-slate-600 md:mt-7 md:text-xl"
+          className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-600 md:mt-7 md:text-lg"
         >
-          Track how your clients show up across AI platforms, uncover missed
-          visibility, and prove impact with data you can actually report.
+          Whether you're a first-time founder, a funded startup, or a business looking to leverage AI — we bring the execution speed, engineering depth, and AI expertise you need, right now.
         </p>
 
+        
+
         <div className="pointer-events-auto mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-8 md:gap-4">
+          {/* Primary CTA */}
           <motion.a
             data-hero="cta"
-            href="/#contact"
+            href="/contact"
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 420, damping: 30 }}
-            className="inline-flex items-center gap-2 rounded-xl border border-white/70 bg-white/85 px-5 py-3 text-base font-semibold text-slate-900 shadow-[0_14px_32px_rgba(79,70,229,0.16)] backdrop-blur-sm transition hover:bg-white md:px-6 md:text-lg"
+            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-6 py-3.5 text-base font-bold text-white shadow-[0_16px_34px_rgba(79,70,229,0.35)] transition hover:brightness-110 md:px-8 md:text-lg"
           >
-            Book a Call
-            <span aria-hidden="true">↗</span>
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+            </svg>
+            Get an AI Audit
           </motion.a>
+          {/* Secondary CTA */}
           <motion.a
             data-hero="cta"
-            href="/about"
+            href="/contact"
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 420, damping: 30 }}
-            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-5 py-3 text-base font-semibold text-white shadow-[0_16px_34px_rgba(79,70,229,0.3)] transition hover:brightness-110 md:px-6 md:text-lg"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/70 bg-white/85 px-5 py-3.5 text-base font-semibold text-slate-900 shadow-[0_14px_32px_rgba(79,70,229,0.14)] backdrop-blur-sm transition hover:bg-white md:px-7 md:text-lg"
           >
-            Know More
-            <span aria-hidden="true">→</span>
+            <svg className="h-4 w-4 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+            </svg>
+            Fastest MVP Development
           </motion.a>
         </div>
 
