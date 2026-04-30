@@ -24,9 +24,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${inter.variable} h-full antialiased`}
+      className={`${jakarta.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="font-sans">
         <LenisProvider>
           <div className="grain-overlay" aria-hidden="true" />
           {children}

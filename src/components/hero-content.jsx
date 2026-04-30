@@ -46,20 +46,6 @@ export function HeroContent() {
         ref={rootRef}
         className="mx-auto flex w-full max-w-5xl flex-col items-center text-center text-slate-900"
       >
-        <motion.div
-          data-hero="badge"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.35 }}
-          className="mb-6 inline-flex items-center gap-3 rounded-full border border-white/70 bg-white/70 px-4 py-2 text-sm font-medium shadow-[0_16px_34px_rgba(79,70,229,0.16)] backdrop-blur-md"
-        >
-          <span className="rounded-full border border-indigo-200 bg-indigo-50 px-2 py-0.5 text-[11px] tracking-[0.12em] text-indigo-700">
-            NEW
-          </span>
-          <span>Introducing 42works</span>
-          <span aria-hidden="true">&rarr;</span>
-        </motion.div>
-
         <h1
           data-hero="title"
           className="font-heading max-w-5xl text-balance text-[clamp(2.2rem,8.5vw,5rem)] font-bold leading-[0.98] tracking-tight drop-shadow-[0_8px_28px_rgba(79,70,229,0.18)]"

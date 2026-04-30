@@ -49,13 +49,13 @@ export function Header() {
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 380, damping: 26 }}
         >
-          <span className="bg-gradient-to-r from-indigo-700 to-teal-600 bg-clip-text text-sm font-extrabold tracking-[0.14em] text-transparent">
+          <span className="bg-gradient-to-r from-indigo-700 to-teal-600 bg-clip-text text-[16px] font-extrabold tracking-[0.14em] text-transparent">
             42Works
           </span>
         </motion.a>
         <div className="hidden items-center gap-1 md:flex">
           <div className="relative" onMouseEnter={handleServicesEnter} onMouseLeave={() => setMenuOpen(false)}>
-            <Button size="sm" variant="ghost" className="group text-xs text-slate-700 transition-colors hover:bg-white hover:text-slate-900">
+            <Button size="sm" variant="ghost" className="group text-[14px] font-semibold text-slate-700 transition-colors hover:bg-white hover:text-slate-900">
               <Layers className="mr-1.5 size-3.5" />
               Services
               <ChevronDown className="ml-1 size-3.5 opacity-50 transition-transform duration-200 group-hover:rotate-180" />
@@ -101,10 +101,7 @@ export function Header() {
                       </div>
 
                       <div className="rounded-lg border border-slate-100 bg-white/90 p-3">
-                        <p className="mb-3 text-sm font-semibold text-slate-900">
-                          {activeServiceGroup.label}
-                        </p>
-                        <div className="grid grid-cols-1 gap-2">
+                        <div className="grid grid-cols-1 gap-1.5">
                           {activeServiceGroup.services.map((service) => (
                             <motion.a
                               key={service}
@@ -125,7 +122,7 @@ export function Header() {
           </div>
 
           <div className="relative" onMouseEnter={() => setIndustriesMenuOpen(true)} onMouseLeave={() => setIndustriesMenuOpen(false)}>
-            <Button size="sm" variant="ghost" className="group text-xs text-slate-700 transition-colors hover:bg-white hover:text-slate-900">
+            <Button size="sm" variant="ghost" className="group text-[14px] font-semibold text-slate-700 transition-colors hover:bg-white hover:text-slate-900">
               <Building2 className="mr-1.5 size-3.5" />
               Industries
               <ChevronDown className="ml-1 size-3.5 opacity-50 transition-transform duration-200 group-hover:rotate-180" />
@@ -219,7 +216,7 @@ export function Header() {
               key={link.label}
               size="sm"
               variant="ghost"
-              className="text-xs text-slate-700 hover:bg-white hover:text-slate-900"
+            className="text-[14px] font-semibold text-slate-700 hover:bg-white hover:text-slate-900"
             >
               <a href={link.href}>
                 {Icon && <Icon className="mr-1.5 size-3.5" />}
@@ -234,7 +231,7 @@ export function Header() {
           <Button
             size="sm"
             asChild
-            className="bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_10px_24px_rgba(79,70,229,0.35)] transition hover:brightness-110"
+            className="bg-gradient-to-r text-[14px] font-medium from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_10px_24px_rgba(79,70,229,0.35)] transition hover:brightness-110 px-3 py-4"
           >
             <a href="/contact">
               <MessageCircle className="mr-1.5 size-3.5" />

@@ -24,14 +24,19 @@ if (typeof window !== "undefined") {
   import("@react-spring/three");
 }
 
-function FloatingIcon({ children, className = "" }) {
+function FloatingIcon({ children, className = "", label }) {
   return (
-    <div
-      className={`flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/90 shadow-[0_14px_35px_rgba(59,130,246,0.25)] backdrop-blur-sm md:h-16 md:w-16 ${className}`}
-    >
-      <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 md:h-11 md:w-11">
-        {children}
+    <div className={`flex flex-col items-center gap-2 ${className}`}>
+      <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/90 shadow-[0_14px_35px_rgba(59,130,246,0.25)] backdrop-blur-sm md:h-16 md:w-16">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 md:h-11 md:w-11">
+          {children}
+        </div>
       </div>
+      {label && (
+        <span className="rounded-full border border-white/60 bg-white/70 px-3 py-1 text-[11px] font-bold tracking-wide text-indigo-700 shadow-sm backdrop-blur-sm whitespace-nowrap">
+          {label}
+        </span>
+      )}
     </div>
   );
 }
@@ -51,7 +56,7 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: "42works AI Platform & Methodology",
+    title: "AI Platform & Methodology",
     description:
       "Built on pre-configured, secure, scalable, and fully customized agents, our platform is designed to help organizations transform complex business challenges into production-ready AI solutions.",
   },
@@ -152,23 +157,23 @@ export function FundamentalsSection() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1)_0%,transparent_58%)]" />
 
           <div className="absolute left-1/2 top-7 z-10 -translate-x-1/2 md:top-8">
-            <FloatingIcon>
+            <FloatingIcon label="AI Powered">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
               </svg>
             </FloatingIcon>
           </div>
 
-          <div className="absolute left-[17%] top-[38%] z-10">
-            <FloatingIcon>
+          <div className="absolute left-[17%] top-[32%] z-10">
+            <FloatingIcon label="Experience">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
               </svg>
             </FloatingIcon>
           </div>
 
-          <div className="absolute right-[17%] top-[38%] z-10">
-            <FloatingIcon>
+          <div className="absolute right-[17%] top-[32%] z-10">
+            <FloatingIcon label="Engineering">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
               </svg>

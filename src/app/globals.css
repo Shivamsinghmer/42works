@@ -40,9 +40,14 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
-  min-height: 100%;
   background-color: var(--background);
+}
+
+body {
+  min-height: 100%;
+  overflow-y: auto;
 }
 
 /* Smooth scroll overrides for Lenis */
@@ -122,6 +127,7 @@ html.lenis body {
 .page-root {
   position: relative;
   isolation: isolate;
+  overflow-x: hidden;
 }
 
 .splash-cursor-active,
