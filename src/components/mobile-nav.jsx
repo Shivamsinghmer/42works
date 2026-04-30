@@ -117,7 +117,7 @@ export function MobileNav() {
 
               <div className="mt-2 flex flex-col gap-2">
               <Button asChild className="w-full bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_12px_30px_rgba(79,70,229,0.35)] transition hover:brightness-110">
-                <a href="#book-a-call" onClick={closeMenu}>Book a Call</a>
+                <a href="/#contact" onClick={closeMenu}>Book a Call</a>
               </Button>
               </div>
             </div>

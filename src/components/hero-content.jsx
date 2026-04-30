@@ -41,10 +41,10 @@ export function HeroContent() {
   }, []);
 
   return (
-    <section className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center px-4 pb-8 pt-24 md:px-6 md:pb-10 md:pt-20">
+    <div className="pointer-events-none relative z-20 flex min-h-[100svh] w-full flex-col items-center justify-center px-4 pb-[30vh] pt-28 md:px-6 md:pb-[35vh] md:pt-32">
       <div
         ref={rootRef}
-        className="mx-auto flex w-full max-w-6xl flex-col items-center text-center text-slate-900"
+        className="mx-auto flex w-full max-w-5xl flex-col items-center text-center text-slate-900"
       >
         <motion.div
           data-hero="badge"
@@ -101,7 +101,7 @@ export function HeroContent() {
         <div className="pointer-events-auto mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-8 md:gap-4">
           <motion.a
             data-hero="cta"
-            href="#"
+            href="/#contact"
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 420, damping: 30 }}
@@ -112,7 +112,7 @@ export function HeroContent() {
           </motion.a>
           <motion.a
             data-hero="cta"
-            href="#"
+            href="/about"
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 420, damping: 30 }}
@@ -133,6 +133,6 @@ export function HeroContent() {
           <LogoCloud />
         </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

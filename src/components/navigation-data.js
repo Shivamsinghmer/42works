@@ -1,7 +1,7 @@
 export const CENTER_LINKS = [
   {
     label: "About",
-    href: "#about",
+    href: "/about",
   },
 ];
 

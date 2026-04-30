@@ -42,7 +42,7 @@ export function Header() {
       <nav className="flex h-[3.75rem] w-full items-center justify-between px-4 md:px-5">
         <motion.a
           className="inline-flex items-center gap-2 rounded-lg p-2 hover:bg-white/70"
-          href="#"
+          href="/"
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 380, damping: 26 }}
         >
@@ -163,7 +163,7 @@ export function Header() {
             asChild
             className="bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_10px_24px_rgba(79,70,229,0.35)] transition hover:brightness-110"
           >
-            <a href="#book-a-call">Book a Call</a>
+            <a href="/#contact">Book a Call</a>
           </Button>
         </div>
         <MobileNav />

@@ -119,7 +119,7 @@ export default function CiklumPage() {
           </Reveal>
           <Reveal delay={0.3}>
             <motion.a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-10 py-4 text-lg font-semibold text-white shadow-[0_16px_50px_rgba(79,70,229,0.35)] transition-all hover:brightness-110"
               whileHover={{ y: -4, scale: 1.03 }}
               whileTap={{ scale: 0.97 }}

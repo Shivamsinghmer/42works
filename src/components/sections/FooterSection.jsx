@@ -4,9 +4,27 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FooterSection() {
   const footerLinks = {
-    Services: ["Engineering", "Experience", "Automation", "Cloud Tech", "Data & AI"],
-    Company: ["About", "Case Studies", "Careers", "Resources"],
-    Industries: ["Banking & Finance", "Retail", "Healthcare", "Hi-Tech", "Automotive", "Travel"],
+    Services: [
+      { name: "Engineering", href: "#engineering" },
+      { name: "Experience", href: "#experience" },
+      { name: "Automation", href: "#automation" },
+      { name: "Cloud Tech", href: "#cloud" },
+      { name: "Data & AI", href: "#data" }
+    ],
+    Company: [
+      { name: "About", href: "/about" },
+      { name: "Case Studies", href: "#case-studies" },
+      { name: "Careers", href: "#careers" },
+      { name: "Resources", href: "#resources" }
+    ],
+    Industries: [
+      { name: "Banking & Finance", href: "#finance" },
+      { name: "Retail", href: "#retail" },
+      { name: "Healthcare", href: "#healthcare" },
+      { name: "Hi-Tech", href: "#hitech" },
+      { name: "Automotive", href: "#automotive" },
+      { name: "Travel", href: "#travel" }
+    ],
   };
 
   return (
@@ -30,9 +48,9 @@ export function FooterSection() {
                 <h4 className="mb-4 text-sm font-semibold text-slate-200">{heading}</h4>
                 <ul className="space-y-2">
                   {links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-sm text-slate-300/80 transition-colors hover:text-white">
-                        {link}
+                    <li key={link.name}>
+                      <a href={link.href} className="text-sm text-slate-300/80 transition-colors hover:text-white">
+                        {link.name}
                       </a>
                     </li>
                   ))}
@@ -46,8 +64,8 @@ export function FooterSection() {
           <div className="flex flex-col items-center justify-between gap-4 border-t border-white/15 pt-8 md:flex-row">
             <p className="text-xs text-slate-300/75">© 2026 42works. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="text-xs text-slate-300/75 transition-colors hover:text-white">Terms & Conditions</a>
-              <a href="#" className="text-xs text-slate-300/75 transition-colors hover:text-white">Privacy Notice</a>
+              <a href="/#terms" className="text-xs text-slate-300/75 transition-colors hover:text-white">Terms & Conditions</a>
+              <a href="/#privacy" className="text-xs text-slate-300/75 transition-colors hover:text-white">Privacy Notice</a>
             </div>
           </div>
         </Reveal>
