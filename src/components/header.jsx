@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronDown, Phone, Layers, Building2, ArrowRight, ChevronRight } from "lucide-react";
+import { ChevronDown, MessageCircle, Layers, Building2, ArrowRight, ChevronRight } from "lucide-react";
 import { MobileNav } from "@/components/mobile-nav";
 import { Button } from "@/components/ui/button";
 import { useScroll } from "@/hooks/use-scroll";
@@ -236,9 +236,9 @@ export function Header() {
             asChild
             className="bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 text-white shadow-[0_10px_24px_rgba(79,70,229,0.35)] transition hover:brightness-110"
           >
-            <a href="/#contact">
-              <Phone className="mr-1.5 size-3.5" />
-              Book a Call
+            <a href="/contact">
+              <MessageCircle className="mr-1.5 size-3.5" />
+              Get in touch
             </a>
           </Button>
         </div>
