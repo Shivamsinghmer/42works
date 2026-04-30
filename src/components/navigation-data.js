@@ -1,22 +1,49 @@
+import { 
+  Info, 
+  Bot,
+  Hexagon,
+  Database,
+  Code,
+  MonitorSmartphone,
+  Cloud
+} from "lucide-react";
+
+import { 
+  BankIcon,
+  RetailIcon,
+  HealthIcon,
+  TechIcon,
+  AutoIcon,
+  TravelIcon,
+  AiIcon,
+  BlockchainIcon,
+  DataIcon,
+  EngineeringIcon,
+  ExperienceIcon,
+  CloudGroupIcon
+} from "./IndustryIcons";
+
 export const CENTER_LINKS = [
   {
     label: "About",
     href: "/about",
+    icon: Info,
   },
 ];
 
 export const INDUSTRIES_LINKS = [
-  "Banking & Financial Services",
-  "Retail & Consumer Goods",
-  "Healthcare & Life Sciences",
-  "Hi-Tech",
-  "Automotive & Manufacturing",
-  "Travel & Hospitality"
+  { label: "Banking & Financial Services", icon: BankIcon, desc: "Modernize banking with AI-driven intelligence that transforms risk modeling, fraud detection, and customer engagement into seamless, trusted financial experiences.", image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800" },
+  { label: "Retail & Consumer Goods", icon: RetailIcon, desc: "Drive customer loyalty and operational efficiency with predictive analytics and personalized, omnichannel retail experiences.", image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" },
+  { label: "Healthcare & Life Sciences", icon: HealthIcon, desc: "Empower medical professionals and improve patient outcomes through secure data integration and advanced health-tech solutions.", image: "https://images.unsplash.com/photo-1576091160550-2173ff9e5eb3?auto=format&fit=crop&q=80&w=800" },
+  { label: "Hi-Tech", icon: TechIcon, desc: "Accelerate product innovation and scale seamlessly with cutting-edge engineering and agile software practices.", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" },
+  { label: "Automotive & Manufacturing", icon: AutoIcon, desc: "Optimize supply chains and smart manufacturing with robust IoT integrations and intelligent automation systems.", image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=800" },
+  { label: "Travel & Hospitality", icon: TravelIcon, desc: "Elevate guest experiences and operational agility with connected booking systems and data-driven personalization.", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" },
 ];
 
 export const SERVICE_GROUPS = [
   {
     label: "Artificial Intelligence (AI)",
+    icon: AiIcon,
     services: [
       "AI Audits",
       "Generative AI",
@@ -28,6 +55,7 @@ export const SERVICE_GROUPS = [
   },
   {
     label: "Web3.0 Blockchain",
+    icon: BlockchainIcon,
     services: [
       "dApp Development",
       "Smart Contract Audits",
@@ -36,6 +64,7 @@ export const SERVICE_GROUPS = [
   },
   {
     label: "Data and Intelligence",
+    icon: DataIcon,
     services: [
       "Data Engineering",
       "Data Analytics & Intelligence",
@@ -44,6 +73,7 @@ export const SERVICE_GROUPS = [
   },
   {
     label: "Engineering",
+    icon: EngineeringIcon,
     services: [
       "Full-Stack Development",
       "Mobile App Development",
@@ -53,6 +83,7 @@ export const SERVICE_GROUPS = [
   },
   {
     label: "Experience",
+    icon: ExperienceIcon,
     services: [
       "UI/UX design",
       "Product Discovery",
@@ -62,6 +93,7 @@ export const SERVICE_GROUPS = [
   },
   {
     label: "Cloud Tech",
+    icon: CloudGroupIcon,
     services: [
       "Cloud Transformation",
       "DevOps & CI/CD",

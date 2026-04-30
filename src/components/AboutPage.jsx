@@ -29,7 +29,7 @@ import * as reactSpring from "@react-spring/three";
 import * as drei from "@react-three/drei";
 import * as fiber from "@react-three/fiber";
 
-function LeadershipCard({ image, name, role }) {
+function LeadershipCard({ image, name, role, edu }) {
   return (
     <div className="group flex flex-col items-center text-center">
       <div className="relative mb-5 h-36 w-36 overflow-hidden rounded-full p-1 transition-transform duration-500 group-hover:scale-105">
@@ -47,7 +47,8 @@ function LeadershipCard({ image, name, role }) {
         </div>
       </div>
       <h4 className="font-heading text-lg font-bold text-slate-900 transition-colors group-hover:text-indigo-600">{name}</h4>
-      <p className="mt-1 text-[15px] font-medium text-slate-500">{role}</p>
+      <p className="mt-1 text-[15px] font-medium text-slate-600">{role}</p>
+      {edu && <p className="mt-1.5 text-[13px] font-bold tracking-wide text-indigo-500 uppercase">{edu}</p>}
     </div>
   );
 }
@@ -73,13 +74,13 @@ export default function AboutPage() {
       </div>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#f8fafc] flex flex-col items-center justify-start pb-0 pt-28 md:pt-44">
+      <section className="relative min-h-[100svh] w-full overflow-hidden bg-[#f8fafc] flex flex-col items-center justify-start pb-0 pt-28 md:pt-32">
         {/* Ambient background */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,#e0eaff_0%,#f8fafc_65%)]" />
         <div className="pointer-events-none absolute -left-40 top-10 h-72 w-72 rounded-full bg-indigo-300/20 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 top-20 h-80 w-80 rounded-full bg-cyan-300/20 blur-3xl" />
 
-        <div className="relative z-20 w-full max-w-4xl px-6 text-center pb-48 md:pb-64">
+        <div className="relative z-20 w-full max-w-4xl px-6 text-center pb-48 md:pb-55">
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-indigo-200/80 bg-white/80 px-4 py-2 text-xs font-semibold tracking-widest text-indigo-700 uppercase shadow-sm backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" />
@@ -87,7 +88,7 @@ export default function AboutPage() {
           </div>
           <Reveal>
             <h1 className="mb-4 font-heading text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-tight text-slate-900 md:mb-6">
-              42works is a global,{" "}
+              42works is a global, <br/> 
               <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 AI-powered
               </span>
@@ -312,28 +313,18 @@ export default function AboutPage() {
       <section className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <Reveal>
-            <div className="mb-20 text-center">
-              <h2 className="mb-8 font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-slate-900">Meet Our Leadership</h2>
-              <div className="inline-flex justify-center rounded-full bg-slate-100 p-1">
-                 <button className="rounded-full bg-indigo-600 px-6 py-2 text-[15px] font-semibold text-white shadow-md">All</button>
-                 <button className="rounded-full px-6 py-2 text-[15px] font-semibold text-slate-600 transition hover:bg-slate-200">Board</button>
-                 <button className="rounded-full px-6 py-2 text-[15px] font-semibold text-slate-600 transition hover:bg-slate-200">Executive</button>
-              </div>
+            <div className="mb-16 text-center">
+              <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-slate-900">Meet Our Leadership</h2>
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 gap-x-6 gap-y-16 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-12">
+          <div className="flex flex-wrap justify-center gap-12 sm:gap-20 max-w-5xl mx-auto">
              {[
-               { name: "John Doe", role: "Chief Executive Officer" },
-               { name: "Jane Smith", role: "Chief Technology Officer" },
-               { name: "Mike Johnson", role: "Chief Operating Officer" },
-               { name: "Sarah Williams", role: "Chief Marketing Officer" },
-               { name: "David Brown", role: "VP of Engineering" },
-               { name: "Emily Davis", role: "VP of Experience Design" },
-               { name: "Chris Wilson", role: "Head of AI Research" },
-               { name: "Anna Taylor", role: "Head of Product Strategy" },
+               { name: "Harsimran Singh", role: "Co-Founder", edu: "IIT Delhi 2006-10", image: "https://instagram.fknu1-4.fna.fbcdn.net/v/t51.82787-15/622062598_18084729377141613_8101399911723895746_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=108&ig_cache_key=MjkxODc5MzY4Mjc5NjMxOTM2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=t5ZJvn0qcdUQ7kNvwHdpymK&_nc_oc=Adr5LdZmFo7y0BKrOKY0l9t1r6U_swqSYcg-vAZW1BMM7R_umHr6R21zGJm3WizlSTaa0R1oTNRlwb-BiLRnpXiQ&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=instagram.fknu1-4.fna&_nc_gid=9DCP8MerGbpmLAB0TUEy8A&_nc_ss=7a22e&oh=00_Af3RdUrCdr0gJ7uJvGX6qINAwDBKtghxOz4gnO6uGAEqYw&oe=69F95901" },
+               { name: "Akshat Agrawal", role: "Co-Founder", edu: "IIT Delhi 2006-10", image: "/akshat.jpg" },
+               { name: "Team of Developers", role: "Engineering & Experience", edu: "Global Talent" }
              ].map((person, i) => (
                <Reveal key={person.name} delay={i * 0.05}>
-                 <LeadershipCard name={person.name} role={person.role} />
+                 <LeadershipCard name={person.name} role={person.role} edu={person.edu} image={person.image} />
                </Reveal>
              ))}
           </div>
@@ -379,14 +370,24 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <Reveal>
             <h2 className="mb-12 font-heading text-[clamp(2rem,4vw,3rem)] font-bold">Our Locations</h2>
-            <div className="mx-auto flex max-w-lg items-center justify-between rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-md transition-transform hover:-translate-y-1 hover:bg-white/10">
-               <div className="text-left">
-                  <div className="mb-2 text-2xl font-bold text-white">Global HQ</div>
-                  <div className="text-[15px] leading-relaxed text-slate-400">42works Technology<br/>Innovation Center</div>
-               </div>
-               <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
-                  <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
-               </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { country: "USA", desc: "North America Hub" },
+                { country: "Canada", desc: "Innovation Center" },
+                { country: "Dubai", desc: "Middle East HQ" },
+                { country: "India", desc: "Global Delivery Center" },
+              ].map((loc) => (
+                <div key={loc.country} className="flex flex-col items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur-md transition-transform hover:-translate-y-1 hover:bg-white/10 text-center">
+                   <div className="mb-5 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
+                      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                   </div>
+                   <div className="mb-2 text-2xl font-bold text-white">{loc.country}</div>
+                   <div className="text-[14px] leading-relaxed text-slate-400">{loc.desc}</div>
+                </div>
+              ))}
             </div>
           </Reveal>
         </div>
