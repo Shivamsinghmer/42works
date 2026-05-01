@@ -68,7 +68,7 @@ export function Header() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.18, ease: "easeOut" }}
-                  className="absolute left-1/2 top-full z-[60] w-[720px] -translate-x-1/2 pt-3"
+                  className="absolute left-0 top-full z-[60] w-[720px] pt-3"
                 >
                   <div className="rounded-2xl border border-white/70 bg-[linear-gradient(150deg,rgba(255,255,255,0.95),rgba(243,248,255,0.94))] p-2 shadow-[0_24px_60px_rgba(15,23,42,0.15)] backdrop-blur-xl">
                     <div className="grid grid-cols-[290px_1fr] gap-2">
@@ -135,7 +135,7 @@ export function Header() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.18, ease: "easeOut" }}
-                  className="absolute left-1/2 top-full z-[60] w-[680px] -translate-x-1/2 pt-3"
+                  className="absolute left-0 top-full z-[60] w-[680px] pt-3"
                 >
                   <div className="rounded-2xl border border-white/70 bg-[linear-gradient(150deg,rgba(255,255,255,0.95),rgba(243,248,255,0.94))] p-2 shadow-[0_24px_60px_rgba(15,23,42,0.15)] backdrop-blur-xl">
                     <div className="grid grid-cols-[280px_1fr] gap-2">

@@ -53,7 +53,7 @@ export function MobileNav() {
         </AnimatePresence>
       </Button>
       {open && (
-        <Portal className="top-16" id="mobile-menu">
+        <Portal className="top-[3.75rem]" id="mobile-menu">
           <PortalBackdrop />
           <motion.div
             initial={{ opacity: 0, y: -14, scale: 0.98 }}
@@ -61,11 +61,11 @@ export function MobileNav() {
             transition={{ duration: 0.24, ease: "easeOut" }}
             className={cn(
               "data-[slot=open]:zoom-in-97 ease-out data-[slot=open]:animate-in",
-              "size-full overflow-y-auto p-4"
+              "flex-1 min-h-0 w-full overflow-y-auto px-4 pt-2 pb-12"
             )}
             data-slot={open ? "open" : "closed"}
           >
-            <div className="mx-auto grid w-full max-w-md gap-y-2 rounded-2xl border border-white/70 bg-[linear-gradient(145deg,rgba(255,255,255,0.95),rgba(244,248,255,0.92))] p-3 shadow-[0_26px_60px_rgba(15,23,42,0.18)] backdrop-blur-xl relative">
+            <div className="mx-auto grid w-full max-w-6xl gap-y-2 rounded-2xl border border-white/70 bg-[linear-gradient(145deg,rgba(255,255,255,0.95),rgba(244,248,255,0.92))] p-3 shadow-[0_26px_60px_rgba(15,23,42,0.18)] backdrop-blur-xl relative">
               <div className="flex items-center justify-between px-2 pb-2">
                 <span className="text-xs font-bold uppercase tracking-widest text-slate-800">Menu</span>
                 <Button 

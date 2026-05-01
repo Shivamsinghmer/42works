@@ -42,12 +42,12 @@ export const INDUSTRIES_LINKS = [
 
 export const SERVICE_GROUPS = [
   {
-    label: "Artificial Intelligence (AI)",
+    label: "AI & Web3",
     icon: AiIcon,
     services: [
-      "AI Audits",
-      "Generative AI",
-      "AI Agents and Automation",
+      "AI & Web3 Audits",
+      "Generative AI & Smart Contracts",
+      "AI Agents & Web3 Automation",
       "RAG Systems",
       "Secure Private LLM Systems",
       "Machine Learning",

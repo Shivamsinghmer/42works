@@ -56,7 +56,7 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
           >
-            Build faster.
+            AI & Web3 Audit.
           </motion.span>
           <motion.span
             className="block bg-[linear-gradient(90deg,#4338ca_0%,#0ea5e9_45%,#059669_100%)] bg-clip-text text-transparent drop-shadow-none"
@@ -64,7 +64,7 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.38, ease: "easeOut" }}
           >
-            Scale smarter with AI.
+            Ship Your MVP. Fast.
           </motion.span>
           <motion.span
             className="block text-slate-900"
@@ -72,7 +72,7 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.56, ease: "easeOut" }}
           >
-            Ship what matters.
+            No fluff. Just results.
           </motion.span>
         </h1>
 
@@ -80,7 +80,7 @@ export function HeroContent() {
           data-hero="description"
           className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-600 md:mt-7 md:text-lg"
         >
-          Whether you're a first-time founder, a funded startup, or a business looking to leverage AI — we bring the execution speed, engineering depth, and AI expertise you need, right now.
+          We audit your AI & Web3 systems for compliance, security, and untapped opportunity — then build production-ready solutions at record speed. From smart contract reviews to LLM agent pipelines, we move fast.
         </p>
 
         
@@ -96,9 +96,9 @@ export function HeroContent() {
             className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-6 py-3.5 text-base font-bold text-white shadow-[0_16px_34px_rgba(79,70,229,0.35)] transition hover:brightness-110 md:px-8 md:text-lg"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
             </svg>
-            Get an AI Audit
+            Get a Free AI & Web3 Audit
           </motion.a>
           {/* Secondary CTA */}
           <motion.a
@@ -112,7 +112,7 @@ export function HeroContent() {
             <svg className="h-4 w-4 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
             </svg>
-            Fastest MVP Development
+            Build My MVP — Fast
           </motion.a>
         </div>
 

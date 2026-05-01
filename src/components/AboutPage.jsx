@@ -28,30 +28,7 @@ if (typeof window !== "undefined") {
 import * as reactSpring from "@react-spring/three";
 import * as drei from "@react-three/drei";
 import * as fiber from "@react-three/fiber";
-
-function LeadershipCard({ image, name, role, edu }) {
-  return (
-    <div className="group flex flex-col items-center text-center">
-      <div className="relative mb-5 h-36 w-36 overflow-hidden rounded-full p-1 transition-transform duration-500 group-hover:scale-105">
-        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-        <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)]">
-          {image ? (
-            <img src={image} alt={name} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,#f8fafc,#f1f5f9)] text-slate-300">
-              <svg className="h-14 w-14" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-            </div>
-          )}
-        </div>
-      </div>
-      <h4 className="font-heading text-lg font-bold text-slate-900 transition-colors group-hover:text-indigo-600">{name}</h4>
-      <p className="mt-1 text-[15px] font-medium text-slate-600">{role}</p>
-      {edu && <p className="mt-1.5 text-[13px] font-bold tracking-wide text-indigo-500 uppercase">{edu}</p>}
-    </div>
-  );
-}
+import { ExpandableCard } from "@/components/ui/expandable-card";
 
 function ValueCard({ title, desc, icon }) {
   return (
@@ -90,7 +67,7 @@ export default function AboutPage() {
             <h1 className="mb-4 font-heading text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-tight text-slate-900 md:mb-6">
               42works is a global, <br/> 
               <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                AI-powered
+                AI & Web3-powered
               </span>
               <br />
               Experience Engineering Company.
@@ -98,7 +75,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-slate-500 md:mb-10 md:text-xl">
-              Custom-built experiences for the modern era. We fuse design, engineering, and AI to create solutions that transform businesses.
+              We audit AI & Web3 systems for security, compliance, and opportunity — then build production-ready products at record speed.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -181,9 +158,9 @@ export default function AboutPage() {
               </Reveal>
               <div className="space-y-5">
                 {[
-                  "We put experience at the heart of everything we build, ensuring human-centric design.",
-                  "Engineering as our core strength, and AI as our accelerant to drive digital transformation.",
-                  "We help forward-thinking brands design and build scalable, future-ready solutions.",
+                  "AI & Web3 audits for compliance, smart contract security, and LLM pipeline integrity.",
+                  "Fastest MVP delivery — from idea to live product in weeks, not months.",
+                  "We help forward-thinking founders and enterprises ship what matters, fast.",
                 ].map((text, i) => (
                   <Reveal key={i} delay={0.2 + i * 0.08}>
                     <div className="group flex items-start gap-4 rounded-2xl border border-transparent p-3 transition-all hover:border-indigo-100 hover:bg-indigo-50/50">
@@ -216,7 +193,7 @@ export default function AboutPage() {
               </div>
               <h2 className="mb-8 font-heading text-[clamp(2.5rem,5vw,3.8rem)] font-bold leading-[1.1]">
                 Engineering Precision<br />
-                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">AI Ingenuity</span><br />
+                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">AI & Web3 Ingenuity</span><br />
                 Experience Extraordinary
               </h2>
               <p className="mb-10 max-w-lg text-lg leading-relaxed text-slate-400">
@@ -243,8 +220,8 @@ export default function AboutPage() {
                       </div>
                       <span className="transition-colors duration-500 group-hover:text-white/20">Ex</span>
                    </div>
-                   <div className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-left text-[4.5rem] text-transparent opacity-90 drop-shadow-2xl md:text-[8rem]">
-                     AI
+                   <div className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-left text-[3.5rem] text-transparent opacity-90 drop-shadow-2xl md:text-[6rem] leading-none mt-2">
+                     AI + Web3
                    </div>
                  </div>
               </div>
@@ -287,13 +264,13 @@ export default function AboutPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                 Global Impact
               </div>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">Powering Global Growth with AI</h2>
-              <p className="mx-auto mt-4 max-w-xl text-slate-400">Empowering enterprises worldwide to unlock exponential potential.</p>
+              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">Trusted AI & Web3 Audit + MVP Studio</h2>
+              <p className="mx-auto mt-4 max-w-xl text-slate-400">Audits that uncover real risk. MVPs that ship in weeks. No fluff, just results.</p>
             </div>
           </Reveal>
           <div className="grid gap-px rounded-3xl border border-white/10 bg-white/5 sm:grid-cols-3">
             {[
-              { label: "AI projects delivered", value: "9k+", icon: "🚀" },
+              { label: "AI & Web3 projects", value: "9k+", icon: "🚀" },
               { label: "Global offices", value: "43+", icon: "🌍" },
               { label: "Professionals", value: "62k+", icon: "👥" },
             ].map((stat, i) => (
@@ -317,14 +294,42 @@ export default function AboutPage() {
               <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-slate-900">Meet Our Leadership</h2>
             </div>
           </Reveal>
-          <div className="flex flex-wrap justify-center gap-12 sm:gap-20 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center w-full">
              {[
-               { name: "Harsimran Singh", role: "Co-Founder", edu: "IIT Delhi 2006-10", image: "https://instagram.fknu1-4.fna.fbcdn.net/v/t51.82787-15/622062598_18084729377141613_8101399911723895746_n.jpg?stp=dst-jpg_e35_p640x640_sh2.08_tt6&_nc_cat=108&ig_cache_key=MjkxODc5MzY4Mjc5NjMxOTM2NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTgwMC5zZHIuQzMifQ%3D%3D&_nc_ohc=t5ZJvn0qcdUQ7kNvwHdpymK&_nc_oc=Adr5LdZmFo7y0BKrOKY0l9t1r6U_swqSYcg-vAZW1BMM7R_umHr6R21zGJm3WizlSTaa0R1oTNRlwb-BiLRnpXiQ&_nc_ad=z-m&_nc_cid=2034&_nc_zt=23&_nc_ht=instagram.fknu1-4.fna&_nc_gid=9DCP8MerGbpmLAB0TUEy8A&_nc_ss=7a22e&oh=00_Af3RdUrCdr0gJ7uJvGX6qINAwDBKtghxOz4gnO6uGAEqYw&oe=69F95901" },
-               { name: "Akshat Agrawal", role: "Co-Founder", edu: "IIT Delhi 2006-10", image: "/akshat.jpg" },
-               { name: "Team of Developers", role: "Engineering & Experience", edu: "Global Talent" }
+               { 
+                 name: "Harsimran Singh", 
+                 role: "Co-Founder", 
+                 edu: "IIT Delhi", 
+                 image: "/harsimran.jpeg",
+                 oneLiner: "AI Product Leader, 1x Exit Founder, and architect of AI-native B2B SaaS platforms.",
+                 fullInfo: "With 15 years scaling B2B SaaS, Harsimran co-founded Grownout (acquired by Peoplestrong) and grew its ML platform to 200k users. Holding 2 patents, he recently launched AIOrders, an LLM-native platform built rapidly using AI-assisted tools. He specializes in end-to-end product strategy, transitioning from classical ML to advanced AI agents, and shipping robust solutions in high-stakes environments."
+               },
+               { 
+                 name: "Akshat Agrawal", 
+                 role: "Co-Founder", 
+                 edu: "IIT Delhi & US MBA", 
+                 image: "/akshat.jpg",
+                 oneLiner: "Product Strategy leader and Web3/AI infrastructure builder.",
+                 fullInfo: "With an early career exit, Akshat led Product Strategy for Softbank-funded Snapdeal and multiple SaaS platforms before moving to Web3. He builds exchanges, vaults, and RWA platforms, ensures VARA/MiCA compliance, and is a major proponent of Coinbase's x402 micropayments for autonomous AI agents."
+               },
+               { 
+                 name: "Team of Developers", 
+                 role: "Engineering & Experience", 
+                 edu: "Global Talent",
+                 oneLiner: "World-class engineers shipping code that matters.",
+                 fullInfo: "Our distributed team of senior developers, AI & Web3 specialists, and experience designers bring diverse expertise to every project. We operate with an agile mindset, focusing on speed, quality, and continuous innovation."
+               }
              ].map((person, i) => (
-               <Reveal key={person.name} delay={i * 0.05}>
-                 <LeadershipCard name={person.name} role={person.role} edu={person.edu} image={person.image} />
+               <Reveal key={person.name} delay={i * 0.05} className="flex h-full w-full">
+                 <ExpandableCard 
+                   title={person.name} 
+                   description={person.role} 
+                   badge={person.edu}
+                   oneLiner={person.oneLiner}
+                   src={person.image || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"} 
+                 >
+                   <p>{person.fullInfo}</p>
+                 </ExpandableCard>
                </Reveal>
              ))}
           </div>

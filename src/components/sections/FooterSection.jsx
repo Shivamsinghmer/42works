@@ -5,11 +5,11 @@ import { Reveal } from "@/components/ui/Reveal";
 export function FooterSection() {
   const footerLinks = {
     Services: [
-      { name: "Engineering", href: "#engineering" },
-      { name: "Experience", href: "#experience" },
-      { name: "Automation", href: "#automation" },
-      { name: "Cloud Tech", href: "#cloud" },
-      { name: "Data & AI", href: "#data" }
+      { name: "AI & Web3 Audit", href: "#audit" },
+      { name: "MVP Development", href: "#mvp" },
+      { name: "Smart Contracts", href: "#blockchain" },
+      { name: "AI Agents & LLMs", href: "#ai" },
+      { name: "Cloud & DevOps", href: "#cloud" }
     ],
     Company: [
       { name: "About", href: "/about" },
@@ -36,7 +36,7 @@ export function FooterSection() {
             <div>
               <span className="bg-gradient-to-r from-indigo-300 to-cyan-200 bg-clip-text text-xl font-bold tracking-wider text-transparent">42works</span>
               <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                AI-Powered Experience Engineering for the Digital Enterprise.
+                AI & Web3 Audit + Fastest MVP Development for ambitious founders and enterprises.
               </p>
             </div>
           </Reveal>

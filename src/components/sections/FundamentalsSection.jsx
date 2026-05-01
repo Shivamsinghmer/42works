@@ -56,9 +56,9 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: "AI Platform & Methodology",
+    title: "AI & Web3 Platform Methodology",
     description:
-      "Built on pre-configured, secure, scalable, and fully customized agents, our platform is designed to help organizations transform complex business challenges into production-ready AI solutions.",
+      "Built on pre-configured, secure, scalable, and fully customized agents and smart contracts, our platform is designed to help organizations transform complex business challenges into production-ready AI & Web3 solutions.",
   },
   {
     icon: (
@@ -68,7 +68,7 @@ const pillars = [
     ),
     title: "Engineered for Experience Built for Impact",
     description:
-      "We put experience at the heart of everything we build, with engineering as our core strength and AI as an accelerant. Every solution is designed to be scalable and resilient.",
+      "We put experience at the heart of everything we build, with engineering as our core strength and AI & Web3 as accelerants. Every solution is designed to be scalable and resilient.",
   },
   {
     icon: (
@@ -82,7 +82,7 @@ const pillars = [
   },
 ];
 
-const highlights = ["AI-native architectures", "Design-first experiences", "Production-grade delivery"];
+const highlights = ["AI & Web3 Audit", "MVP in weeks", "Production-grade delivery"];
 const topBars = [
   "bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500",
   "bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500",
@@ -109,8 +109,8 @@ export function FundamentalsSection() {
               Toward Possibilities
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600">
-              We don&apos;t just engineer — we reinvent. Fusing design, technology, and
-              AI, we create solutions built to scale, evolve, and redefine what&apos;s
+              We don&apos;t just audit — we uncover. Fusing deep compliance expertise, engineering,
+              and AI & Web3, we identify every risk and then build what&apos;s
               next. This isn&apos;t about products. This is about competitive advantage.
             </p>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 md:gap-3">
@@ -157,7 +157,7 @@ export function FundamentalsSection() {
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1)_0%,transparent_58%)]" />
 
           <div className="absolute left-1/2 top-7 z-10 -translate-x-1/2 md:top-8">
-            <FloatingIcon label="AI Powered">
+            <FloatingIcon label="AI & Web3 Powered">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
               </svg>

@@ -33,8 +33,8 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }) {
 }
 
 const stats = [
-  { value: 4000, suffix: "+", label: "Engineers & Experts" },
-  { value: 25, suffix: "+", label: "Years of Excellence" },
+  { value: 120, suffix: "+", label: "AI & Web3 Audits Completed" },
+  { value: 4, suffix: "wk", label: "Average MVP Delivery Time" },
   { value: 200, suffix: "+", label: "Enterprise Clients" },
   { value: 30, suffix: "+", label: "Global Locations" },
 ];
@@ -46,12 +46,12 @@ export function StatsSection() {
       <div className="relative mx-auto max-w-6xl">
         <Reveal>
           <h2 className="mb-4 text-center font-heading text-3xl font-bold text-white md:text-4xl">
-            Data-first, Design-led
+            Audit First. Ship Fast. Scale Smart.
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-300">
-            We help enterprises go beyond proofs of concept and deploy AI at scale, in real products, real workflows, and real business outcomes.
+            We audit your AI & Web3 systems end-to-end, fix the gaps, and then build production-grade products at record speed — no wasted sprints, no compliance surprises.
           </p>
         </Reveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
