@@ -56,7 +56,7 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
           >
-            AI & Web3 Audit.
+            AI Audit & Web3 Strategy.
           </motion.span>
           <motion.span
             className="block bg-[linear-gradient(90deg,#4338ca_0%,#0ea5e9_45%,#059669_100%)] bg-clip-text text-transparent drop-shadow-none"
@@ -80,7 +80,7 @@ export function HeroContent() {
           data-hero="description"
           className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-600 md:mt-7 md:text-lg"
         >
-          We audit your AI & Web3 systems for compliance, security, and untapped opportunity — then build production-ready solutions at record speed. From smart contract reviews to LLM agent pipelines, we move fast.
+          We audit your AI systems and Web3 infrastructure for compliance, security, and opportunity — then build production-ready products at record speed.
         </p>
 
         

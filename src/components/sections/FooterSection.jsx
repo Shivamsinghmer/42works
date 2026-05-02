@@ -5,11 +5,12 @@ import { Reveal } from "@/components/ui/Reveal";
 export function FooterSection() {
   const footerLinks = {
     Services: [
-      { name: "AI & Web3 Audit", href: "#audit" },
-      { name: "MVP Development", href: "#mvp" },
-      { name: "Smart Contracts", href: "#blockchain" },
-      { name: "AI Agents & LLMs", href: "#ai" },
-      { name: "Cloud & DevOps", href: "#cloud" }
+      { name: "AI Audit", href: "/services/ai-audit" },
+      { name: "Generative AI", href: "/services/generative-ai" },
+      { name: "AI Agents & Automation", href: "/services/ai-agents" },
+      { name: "Web3 & Smart Contracts", href: "/services/web3-blockchain" },
+      { name: "Data & Intelligence", href: "/services/data-intelligence" },
+      { name: "MVP Development", href: "/services/mvp-development" }
     ],
     Company: [
       { name: "About", href: "/about" },
@@ -18,12 +19,12 @@ export function FooterSection() {
       { name: "Resources", href: "#resources" }
     ],
     Industries: [
-      { name: "Banking & Finance", href: "#finance" },
-      { name: "Retail", href: "#retail" },
-      { name: "Healthcare", href: "#healthcare" },
-      { name: "Hi-Tech", href: "#hitech" },
-      { name: "Automotive", href: "#automotive" },
-      { name: "Travel", href: "#travel" }
+      { name: "Banking & Finance", href: "/industries/banking" },
+      { name: "Retail", href: "/industries/retail" },
+      { name: "Healthcare", href: "/industries/healthcare" },
+      { name: "Hi-Tech", href: "/industries/hi-tech" },
+      { name: "Automotive", href: "/industries/automotive" },
+      { name: "Travel", href: "/industries/travel" }
     ],
   };
 

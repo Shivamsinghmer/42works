@@ -26,9 +26,9 @@ const philosophyCards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
       </svg>
     ),
-    title: "AI & Web3 Audit — Find Every Risk, Fast",
+    title: "AI Audit — Find Every Risk, Unlock Every Opportunity",
     description:
-      "We perform deep technical audits on your AI pipelines, smart contracts, LLM systems, and Web3 infrastructure. From VARA/MiCA compliance to KYT/KYC gaps and smart contract vulnerabilities — we expose every risk before it costs you.",
+      "We audit your AI pipelines, LLM systems, and model governance for risks, compliance gaps, and performance leaks. Separately, our Web3 audits cover smart contracts, DeFi protocols, KYT/KYC compliance, and VARA/MiCA readiness. One team. Two deep specialties.",
     accent: "border-l-teal-400",
   },
   {
@@ -94,14 +94,14 @@ export function ServicesSection() {
         <div className="text-center mb-12">
           <Reveal>
             <h2 className="font-heading text-[clamp(2rem,5vw,3.8rem)] font-bold tracking-tight text-slate-900 mb-5 leading-tight">
-              AI & Web3 Audit.
+              AI Audit. Web3 Audit.
               <br />
               <span className="bg-gradient-to-r from-indigo-600 to-teal-500 bg-clip-text text-transparent">MVP in Weeks.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-slate-600">
-              We audit your AI & Web3 stack end-to-end, then build production-grade MVPs at speed. Two specialties. One mission: ship what matters.
+              We audit AI systems and Web3 infrastructure end-to-end, then build production-grade MVPs at speed. Two deep specialties. One mission: ship what matters.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -111,7 +111,7 @@ export function ServicesSection() {
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(79,70,229,0.3)] transition hover:brightness-110"
             >
-              Get a Free Audit
+              Get an Audit
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20">
                 →
               </span>

@@ -97,12 +97,12 @@ export function MobileNav() {
                     <div className="mt-1 grid gap-y-1 pl-3">
                       {group.services.map((service) => (
                         <a
-                          key={service}
-                          href="#"
+                          key={service.label}
+                          href={service.href || "#"}
                           onClick={closeMenu}
                           className="rounded-md px-2 py-1.5 text-sm text-slate-600 hover:bg-indigo-50/70 hover:text-slate-900"
                         >
-                          {service}
+                          {service.label}
                         </a>
                       ))}
                     </div>
@@ -122,7 +122,7 @@ export function MobileNav() {
                     return (
                     <a
                       key={industry.label}
-                      href="#"
+                      href={industry.href || "#"}
                       onClick={closeMenu}
                       className="flex items-center rounded-md px-2 py-2 text-sm text-slate-600 hover:bg-indigo-50/70 hover:text-slate-900"
                     >

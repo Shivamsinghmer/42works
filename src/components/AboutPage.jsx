@@ -67,7 +67,7 @@ export default function AboutPage() {
             <h1 className="mb-4 font-heading text-[clamp(2.2rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-tight text-slate-900 md:mb-6">
               42works is a global, <br/> 
               <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                AI & Web3-powered
+                AI-native & Web3-ready
               </span>
               <br />
               Experience Engineering Company.
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-slate-500 md:mb-10 md:text-xl">
-              We audit AI & Web3 systems for security, compliance, and opportunity — then build production-ready products at record speed.
+              We specialize in AI audits, Web3 protocol reviews, and fastest-in-class MVP development — helping founders and enterprises ship with confidence.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -158,9 +158,9 @@ export default function AboutPage() {
               </Reveal>
               <div className="space-y-5">
                 {[
-                  "AI & Web3 audits for compliance, smart contract security, and LLM pipeline integrity.",
+                  "AI audits — LLM pipelines, model governance, agentic systems, and compliance.",
+                  "Web3 audits — smart contract security, DeFi protocols, VARA/MiCA, KYT/KYC.",
                   "Fastest MVP delivery — from idea to live product in weeks, not months.",
-                  "We help forward-thinking founders and enterprises ship what matters, fast.",
                 ].map((text, i) => (
                   <Reveal key={i} delay={0.2 + i * 0.08}>
                     <div className="group flex items-start gap-4 rounded-2xl border border-transparent p-3 transition-all hover:border-indigo-100 hover:bg-indigo-50/50">
@@ -193,7 +193,7 @@ export default function AboutPage() {
               </div>
               <h2 className="mb-8 font-heading text-[clamp(2.5rem,5vw,3.8rem)] font-bold leading-[1.1]">
                 Engineering Precision<br />
-                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">AI & Web3 Ingenuity</span><br />
+                <span className="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">AI Depth, Web3 Breadth</span><br />
                 Experience Extraordinary
               </h2>
               <p className="mb-10 max-w-lg text-lg leading-relaxed text-slate-400">
@@ -264,13 +264,13 @@ export default function AboutPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                 Global Impact
               </div>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">Trusted AI & Web3 Audit + MVP Studio</h2>
-              <p className="mx-auto mt-4 max-w-xl text-slate-400">Audits that uncover real risk. MVPs that ship in weeks. No fluff, just results.</p>
+              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">AI Audit. Web3 Audit. Fastest MVP.</h2>
+              <p className="mx-auto mt-4 max-w-xl text-slate-400">Two deep specialties. One mission: ship what matters, securely and fast.</p>
             </div>
           </Reveal>
           <div className="grid gap-px rounded-3xl border border-white/10 bg-white/5 sm:grid-cols-3">
             {[
-              { label: "AI & Web3 projects", value: "9k+", icon: "🚀" },
+              { label: "AI & Web3 audits", value: "9k+", icon: "🚀" },
               { label: "Global offices", value: "43+", icon: "🌍" },
               { label: "Professionals", value: "62k+", icon: "👥" },
             ].map((stat, i) => (

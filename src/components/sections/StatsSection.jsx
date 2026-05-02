@@ -46,12 +46,12 @@ export function StatsSection() {
       <div className="relative mx-auto max-w-6xl">
         <Reveal>
           <h2 className="mb-4 text-center font-heading text-3xl font-bold text-white md:text-4xl">
-            Audit First. Ship Fast. Scale Smart.
+            Audit. Build. Scale.
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-300">
-            We audit your AI & Web3 systems end-to-end, fix the gaps, and then build production-grade products at record speed — no wasted sprints, no compliance surprises.
+            We audit AI systems for security and compliance. We audit Web3 protocols for smart contract safety. Then we build production-grade products at record speed.
           </p>
         </Reveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">

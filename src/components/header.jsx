@@ -104,12 +104,12 @@ export function Header() {
                         <div className="grid grid-cols-1 gap-1.5">
                           {activeServiceGroup.services.map((service) => (
                             <motion.a
-                              key={service}
-                              href="#"
+                              key={service.label}
+                              href={service.href || "#"}
                               whileHover={{ x: 4 }}
                               className="rounded-md px-3 py-2 text-sm text-slate-600 transition hover:bg-indigo-50/70 hover:text-slate-900"
                             >
-                              {service}
+                              {service.label}
                             </motion.a>
                           ))}
                         </div>
@@ -145,9 +145,9 @@ export function Header() {
                           const Icon = industry.icon;
                           const isActive = activeIndustryLabel === industry.label;
                           return (
-                          <motion.button
+                          <motion.a
                             key={industry.label}
-                            type="button"
+                            href={industry.href || "#"}
                             onMouseEnter={() => setActiveIndustryLabel(industry.label)}
                             whileHover={{ x: 3 }}
                             className={cn(
@@ -164,7 +164,7 @@ export function Header() {
                               <span>{industry.label}</span>
                             </span>
                             <ChevronRight className={cn("size-4 transition-all", isActive ? "text-indigo-400 opacity-100" : "text-slate-300 opacity-0 group-hover:opacity-100")} />
-                          </motion.button>
+                          </motion.a>
                           );
                         })}
                       </div>
@@ -192,7 +192,7 @@ export function Header() {
                                 <p className="text-[13px] leading-relaxed text-slate-500">{activeIndustry.desc}</p>
                               </div>
                               <a
-                                href="#"
+                                href={activeIndustry.href || "#"}
                                 className="mt-3 inline-flex items-center gap-1.5 text-[12px] font-bold uppercase tracking-widest text-indigo-600 hover:text-indigo-800"
                               >
                                 Learn More <ArrowRight className="size-3" />
