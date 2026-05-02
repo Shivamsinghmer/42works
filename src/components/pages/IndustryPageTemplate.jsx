@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { Header } from "@/components/header";
 import { FooterSection } from "@/components/sections/FooterSection";
@@ -47,6 +47,34 @@ function FadeIn({ children, delay = 0, direction = "up", className = "" }) {
 function StatCard({ value, label, delay = 0 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [count, setCount] = useState(0);
+
+  const match = String(value).match(/^([^0-9]*)([0-9.,]+)(.*)$/);
+  const prefix = match ? match[1] : "";
+  const numberStr = match ? match[2] : "";
+  const suffix = match ? match[3] : String(value);
+  const target = parseFloat(numberStr.replace(/,/g, "")) || 0;
+  const isFloat = numberStr.includes(".");
+
+  useEffect(() => {
+    if (!inView || target === 0) return;
+    let start = 0;
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(start);
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [inView, target]);
+
+  const displayValue = match && target > 0 ? `${prefix}${isFloat ? count.toFixed(1) : Math.floor(count)}${suffix}` : value;
+
   return (
     <motion.div
       ref={ref}
@@ -56,7 +84,7 @@ function StatCard({ value, label, delay = 0 }) {
       className="text-center"
     >
       <div className="mb-1 bg-gradient-to-r from-indigo-300 via-cyan-200 to-teal-300 bg-clip-text font-heading text-[2.8rem] font-bold text-transparent md:text-[3.8rem] leading-none">
-        {value}
+        {displayValue}
       </div>
       <p className="text-sm text-slate-400">{label}</p>
     </motion.div>
