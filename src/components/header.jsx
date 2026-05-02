@@ -49,7 +49,7 @@ export function Header() {
           whileHover={{ scale: 1.03 }}
           transition={{ type: "spring", stiffness: 380, damping: 26 }}
         >
-          <span className="bg-gradient-to-r from-indigo-700 to-teal-600 bg-clip-text text-[16px] font-extrabold tracking-[0.14em] text-transparent">
+          <span className="bg-gradient-to-r from-indigo-700 to-teal-600 bg-clip-text text-[16px] font-extrabold tracking-tighter text-transparent">
             42Works
           </span>
         </motion.a>

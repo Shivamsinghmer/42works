@@ -44,7 +44,7 @@ function ValueCard({ title, desc, icon }) {
 
 export default function AboutPage() {
   return (
-    <div className="page-root min-h-screen bg-[#f5f7ff]">
+    <div className="page-root min-h-screen overflow-clip bg-[#f5f7ff]">
       {/* HEADER */}
       <div className="fixed left-0 top-0 z-50 w-full px-4 py-3 md:px-8 md:py-4">
         <Header />

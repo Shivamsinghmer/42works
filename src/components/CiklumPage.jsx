@@ -50,7 +50,7 @@ export default function CiklumPage() {
   }, []);
 
   return (
-    <div ref={containerRef} className="page-root">
+    <div ref={containerRef} className="page-root overflow-clip">
       {/* ── STICKY HEADER ─────────────────────────────────── */}
       <div className="fixed left-0 top-0 z-50 w-full px-4 py-3 md:px-8 md:py-4">
         <Header />

@@ -86,11 +86,13 @@ export default function ServicePageTemplate({ service }) {
   const marqueeItems = service.capabilities.map((c) => c.title);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white">
+    <div className="bg-white overflow-clip">
+      <div className="absolute inset-x-0 top-4 z-50 flex justify-center px-4">
+        <Header />
+      </div>
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <Header />
-      <section ref={heroRef} className="relative flex h-[100vh] max-h-[100vh] items-center overflow-hidden bg-slate-50">
+      <section ref={heroRef} className="relative flex h-[100svh] items-center overflow-hidden bg-slate-50">
         {/* Parallax BG image */}
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <img src={service.heroImage} alt="" className="h-full w-full object-cover opacity-[0.12]" />

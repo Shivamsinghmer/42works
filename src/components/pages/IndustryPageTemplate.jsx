@@ -70,11 +70,13 @@ export default function IndustryPageTemplate({ industry }) {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white">
-      <Header />
+    <div className="bg-white overflow-clip">
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section ref={heroRef} className="relative flex h-[100svh] max-h-[100svh] min-h-[100svh] items-center overflow-hidden bg-slate-50">
+      <div className="absolute inset-x-0 top-4 z-50 flex justify-center px-4">
+        <Header />
+      </div>
+      <section ref={heroRef} className="relative flex h-[100svh] items-center overflow-hidden bg-slate-50">
         <motion.div style={{ y: heroY }} className="absolute inset-0 z-0">
           <img src={industry.heroImage} alt="" className="h-full w-full object-cover opacity-[0.12]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_62%_at_8%_28%,rgba(99,102,241,0.18),transparent)]" />
