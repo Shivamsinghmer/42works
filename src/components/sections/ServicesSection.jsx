@@ -26,9 +26,9 @@ const philosophyCards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
       </svg>
     ),
-    title: "AI Audit — Find Every Risk, Unlock Every Opportunity",
+    title: "Audit for Opportunity",
     description:
-      "We audit your AI pipelines, LLM systems, and model governance for risks, compliance gaps, and performance leaks. Separately, our Web3 audits cover smart contracts, DeFi protocols, KYT/KYC compliance, and VARA/MiCA readiness. One team. Two deep specialties.",
+      "We audit your AI and Web3 landscape to surface the highest-value opportunities to build. Compliance is built in — but the real goal is a clear roadmap to business impact.",
     accent: "border-l-teal-400",
   },
   {
@@ -37,9 +37,9 @@ const philosophyCards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: "Fastest MVP — From Idea to Live in Weeks",
+    title: "Live in 45 Days",
     description:
-      "We ship production-grade MVPs in weeks, not months. Our AI-assisted development process, senior engineering team, and battle-tested playbooks cut time-to-market dramatically — so you validate faster and spend less.",
+      "We build and launch AI & Web3 solutions fast. \"Live\" means a PoC, an MVP, or a standalone production feature — whichever delivers the most value for your business.",
     accent: "border-l-indigo-400",
   },
   {
@@ -48,9 +48,9 @@ const philosophyCards = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
       </svg>
     ),
-    title: "No Lock-ins. Platform-Agnostic. Built to Last.",
+    title: "Platform-Agnostic. No Lock-ins.",
     description:
-      "Your strategy comes first. We select only the tools that fit — whether it\'s a custom LLM pipeline, a DeFi protocol, or a hybrid AI-Web3 product. You own everything, always.",
+      "Your strategy comes first. We pick only the tools that fit — a custom LLM pipeline, a DeFi protocol, or a hybrid AI-Web3 product. You own everything we build, always.",
     accent: "border-l-purple-400",
   },
 ];
@@ -94,14 +94,14 @@ export function ServicesSection() {
         <div className="text-center mb-12">
           <Reveal>
             <h2 className="font-heading text-[clamp(2rem,5vw,3.8rem)] font-bold tracking-tight text-slate-900 mb-5 leading-tight">
-              AI Audit. Web3 Audit.
+              Audit for Opportunity.
               <br />
-              <span className="bg-gradient-to-r from-indigo-600 to-teal-500 bg-clip-text text-transparent">MVP in Weeks.</span>
+              <span className="bg-gradient-to-r from-indigo-600 to-teal-500 bg-clip-text text-transparent">Live in 45 Days.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-slate-600">
-              We audit AI systems and Web3 infrastructure end-to-end, then build production-grade MVPs at speed. Two deep specialties. One mission: ship what matters.
+              We use audit-led discovery to surface high-impact opportunities, then build the right AI & Web3 solution to go live fast.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -111,7 +111,7 @@ export function ServicesSection() {
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-indigo-700 via-blue-600 to-teal-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(79,70,229,0.3)] transition hover:brightness-110"
             >
-              Get an Audit
+              Book an Opportunity Audit
               <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20">
                 →
               </span>
@@ -122,15 +122,15 @@ export function ServicesSection() {
         {/* Philosophy Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           {philosophyCards.map((card, i) => (
-            <Reveal key={card.title} delay={i * 0.12}>
+            <Reveal key={card.title} delay={i * 0.12} className="flex">
               <div
-                className={`rounded-2xl border border-white/70 bg-white/80 p-7 shadow-[0_14px_36px_rgba(15,23,42,0.08)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(79,70,229,0.2)]`}
+                className={`flex h-full flex-col rounded-2xl border border-white/70 bg-white/80 p-7 shadow-[0_14px_36px_rgba(15,23,42,0.08)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_55px_rgba(79,70,229,0.2)]`}
               >
                 <IconCircle>{card.icon}</IconCircle>
                 <h3 className="font-heading text-lg font-bold text-slate-900 mb-3 leading-snug">
                   {card.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">
+                <p className="text-slate-500 text-sm leading-relaxed flex-1">
                   {card.description}
                 </p>
               </div>

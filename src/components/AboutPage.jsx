@@ -75,7 +75,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-slate-500 md:mb-10 md:text-xl">
-              We specialize in AI audits, Web3 protocol reviews, and fastest-in-class MVP development — helping founders and enterprises ship with confidence.
+              We use AI audits as a way to get information about your business and surface opportunities to leverage AI for real-world value.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -158,9 +158,9 @@ export default function AboutPage() {
               </Reveal>
               <div className="space-y-5">
                 {[
-                  "AI audits — LLM pipelines, model governance, agentic systems, and compliance.",
-                  "Web3 audits — smart contract security, DeFi protocols, VARA/MiCA, KYT/KYC.",
-                  "Fastest MVP delivery — from idea to live product in weeks, not months.",
+                  "AI audits — a way to get information about your business and surface opportunities to implement AI.",
+                  "Web3 audits — evaluate readiness, security, and opportunity across your stack.",
+                  "AI & Web3 solutions building — going live in 45 days as a PoC, MVP, or independent feature.",
                 ].map((text, i) => (
                   <Reveal key={i} delay={0.2 + i * 0.08}>
                     <div className="group flex items-start gap-4 rounded-2xl border border-transparent p-3 transition-all hover:border-indigo-100 hover:bg-indigo-50/50">
@@ -264,8 +264,8 @@ export default function AboutPage() {
                 <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
                 Global Impact
               </div>
-              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">AI Audit. Web3 Audit. Fastest MVP.</h2>
-              <p className="mx-auto mt-4 max-w-xl text-slate-400">Two deep specialties. One mission: ship what matters, securely and fast.</p>
+              <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold">Audit for Insight. Build for Value.</h2>
+              <p className="mx-auto mt-4 max-w-xl text-slate-400">We combine AI and Web3 depth to move from opportunity discovery to real-world business outcomes.</p>
             </div>
           </Reveal>
           <div className="grid gap-px rounded-3xl border border-white/10 bg-white/5 sm:grid-cols-3">
@@ -430,6 +430,30 @@ export default function AboutPage() {
                  Learn More <span>→</span>
                </a>
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="bg-[#020617] py-24 text-white md:py-28">
+        <div className="mx-auto max-w-5xl px-6 text-center md:px-12">
+          <Reveal>
+            <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-bold leading-tight">
+              Ready to turn AI opportunities into shipped outcomes?
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-slate-300 md:text-lg">
+              We partner with ambitious teams to discover, build, and launch AI & Web3 solutions that drive real business value.
+            </p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <a
+              href="/contact"
+              className="mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-blue-600 px-8 py-3.5 text-[15px] font-semibold text-white shadow-[0_12px_32px_rgba(79,70,229,0.35)] transition hover:brightness-110"
+            >
+              Partner with us <span>→</span>
+            </a>
           </Reveal>
         </div>
       </section>

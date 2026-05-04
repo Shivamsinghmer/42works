@@ -10,7 +10,7 @@ export function FooterSection() {
       { name: "AI Agents & Automation", href: "/services/ai-agents" },
       { name: "Web3 & Smart Contracts", href: "/services/web3-blockchain" },
       { name: "Data & Intelligence", href: "/services/data-intelligence" },
-      { name: "MVP Development", href: "/services/mvp-development" }
+      { name: "AI & Web3 Solutions Building", href: "/services/mvp-development" }
     ],
     Company: [
       { name: "About", href: "/about" },
@@ -37,7 +37,7 @@ export function FooterSection() {
             <div>
               <span className="bg-gradient-to-r from-indigo-300 to-cyan-200 bg-clip-text text-xl font-bold tracking-wider text-transparent">42works</span>
               <p className="mt-4 text-sm leading-relaxed text-slate-300">
-                AI & Web3 Audit + Fastest MVP Development for ambitious founders and enterprises.
+                AI audits to surface opportunities + fast AI & Web3 solutions building for ambitious founders and enterprises.
               </p>
             </div>
           </Reveal>

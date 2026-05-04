@@ -34,7 +34,7 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }) {
 
 const stats = [
   { value: 120, suffix: "+", label: "AI & Web3 Audits Completed" },
-  { value: 4, suffix: "wk", label: "Average MVP Delivery Time" },
+  { value: 45, suffix: " Days", label: "To Go Live (PoC/MVP/Feature)" },
   { value: 200, suffix: "+", label: "Enterprise Clients" },
   { value: 30, suffix: "+", label: "Global Locations" },
 ];
@@ -51,7 +51,7 @@ export function StatsSection() {
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mb-16 max-w-2xl text-center text-lg text-slate-300">
-            We audit AI systems for security and compliance. We audit Web3 protocols for smart contract safety. Then we build production-grade products at record speed.
+            We use audits to get information about your business and surface AI opportunities. Then we build production-grade AI & Web3 solutions at record speed.
           </p>
         </Reveal>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">

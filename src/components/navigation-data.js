@@ -80,7 +80,7 @@ export const SERVICE_GROUPS = [
       { label: "Full-Stack Development", href: "/services/full-stack-development" },
       { label: "Mobile App Development", href: "/services/mobile-apps" },
       { label: "API Development", href: "/services/api-development" },
-      { label: "MVP Development", href: "/services/mvp-development" },
+      { label: "AI & Web3 Solutions Building", href: "/services/mvp-development" },
     ],
   },
   {

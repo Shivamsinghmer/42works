@@ -82,7 +82,7 @@ const pillars = [
   },
 ];
 
-const highlights = ["AI Audit", "Web3 & Smart Contracts", "MVP in weeks"];
+const highlights = ["AI Audit", "Web3 & Smart Contracts", "Live in 45 days"];
 const topBars = [
   "bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500",
   "bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500",

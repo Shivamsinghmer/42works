@@ -48,7 +48,7 @@ export function HeroContent() {
       >
         <h1
           data-hero="title"
-          className="font-heading max-w-5xl text-balance text-[clamp(2.2rem,8.5vw,5rem)] font-bold leading-[0.98] tracking-tight drop-shadow-[0_8px_28px_rgba(79,70,229,0.18)]"
+          className="font-heading max-w-5xl text-balance text-[clamp(2.4rem,8vw,5rem)] font-bold leading-[1.05] tracking-tight drop-shadow-[0_8px_28px_rgba(79,70,229,0.18)]"
         >
           <motion.span
             className="block text-slate-900"
@@ -56,7 +56,7 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.2, ease: "easeOut" }}
           >
-            AI Audit & Web3 Strategy.
+            Find the AI Opportunity.
           </motion.span>
           <motion.span
             className="block bg-[linear-gradient(90deg,#4338ca_0%,#0ea5e9_45%,#059669_100%)] bg-clip-text text-transparent drop-shadow-none"
@@ -64,26 +64,18 @@ export function HeroContent() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.55, delay: 0.38, ease: "easeOut" }}
           >
-            Ship Your MVP. Fast.
-          </motion.span>
-          <motion.span
-            className="block text-slate-900"
-            initial={{ opacity: 0, y: 28, filter: "blur(12px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ duration: 0.55, delay: 0.56, ease: "easeOut" }}
-          >
-            No fluff. Just results.
+            Build It. Ship It. Live in 45 Days.
           </motion.span>
         </h1>
 
         <p
           data-hero="description"
-          className="mt-5 max-w-2xl text-pretty text-sm leading-relaxed text-slate-600 md:mt-7 md:text-lg"
+          className="mt-5 max-w-xl text-pretty text-[0.9rem] leading-relaxed text-slate-500 md:mt-7 md:max-w-2xl md:text-lg"
         >
-          We audit your AI systems and Web3 infrastructure for compliance, security, and opportunity — then build production-ready products at record speed.
+          We audit your business to surface high-value AI opportunities, then build and launch the right AI&nbsp;&&nbsp;Web3 solution — as a PoC, MVP, or production feature.
         </p>
 
-        
+
 
         <div className="pointer-events-auto mt-6 flex flex-wrap items-center justify-center gap-3 md:mt-8 md:gap-4">
           {/* Primary CTA */}
@@ -98,7 +90,7 @@ export function HeroContent() {
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
             </svg>
-            Get an AI & Web3 Audit
+            Get an AI Audit
           </motion.a>
           {/* Secondary CTA */}
           <motion.a
@@ -107,12 +99,12 @@ export function HeroContent() {
             whileHover={{ y: -4, scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             transition={{ type: "spring", stiffness: 420, damping: 30 }}
-            className="inline-flex items-center gap-2 rounded-xl border border-white/70 bg-white/85 px-5 py-3.5 text-base font-semibold text-slate-900 shadow-[0_14px_32px_rgba(79,70,229,0.14)] backdrop-blur-sm transition hover:bg-white md:px-7 md:text-lg"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/70 bg-white/85 px-6 py-3.5 text-base font-semibold text-slate-900 shadow-[0_14px_32px_rgba(79,70,229,0.14)] backdrop-blur-sm transition hover:bg-white md:px-8 md:text-lg"
           >
             <svg className="h-4 w-4 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
             </svg>
-            Build My MVP — Fast
+            Build My Solution
           </motion.a>
         </div>
 
