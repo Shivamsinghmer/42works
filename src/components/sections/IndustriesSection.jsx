@@ -41,6 +41,24 @@ const industries = [
     description:
       "Blending operational excellence with exceptional traveler experiences through AI-driven, data-powered solutions.",
   },
+  {
+    title: "Telecom",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=700&q=80",
+    description:
+      "Empower your telecommunications infrastructure with AI and scalable automation for smarter, self-optimizing networks.",
+  },
+  {
+    title: "Field Service Management",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=80",
+    description:
+      "Transform frontline operations with AI-driven scheduling, dynamic route optimization, and powerful offline-first mobile experiences.",
+  },
+  {
+    title: "Energy",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=80",
+    description:
+      "Modernize energy systems with predictive models, real-time asset monitoring, and data platforms built for a sustainable future.",
+  },
 ];
 
 export function IndustriesSection() {
@@ -67,10 +85,10 @@ export function IndustriesSection() {
         </Reveal>
 
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Left: Image */}
-          <Reveal>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/15 shadow-[0_26px_80px_rgba(2,6,23,0.35)]">
+          <Reveal className="h-full">
+            <div className="relative h-full min-h-[400px] w-full overflow-hidden rounded-2xl border border-white/15 shadow-[0_26px_80px_rgba(2,6,23,0.35)] lg:min-h-full">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={industries[active].image}
@@ -90,12 +108,14 @@ export function IndustriesSection() {
 
           {/* Right: Industry list */}
           <Reveal delay={0.15}>
-            <div className="flex flex-col gap-1 rounded-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm h-full content-start">
               {industries.map((industry, i) => (
                 <button
                   key={industry.title}
                   onClick={() => setActive(i)}
-                  className={`text-left w-full transition-all duration-300 rounded-xl px-5 py-4 group`}
+                  className={`text-left w-full transition-all duration-300 rounded-xl px-4 py-3 group ${
+                    active === i ? "sm:col-span-2" : ""
+                  }`}
                 >
                   {active === i ? (
                     <motion.div
@@ -114,8 +134,8 @@ export function IndustriesSection() {
                         </span>
                     </motion.div>
                   ) : (
-                    <div className="border-b border-white/10 px-1 py-1 transition-colors hover:border-white/30">
-                      <h3 className="font-heading text-base font-semibold text-slate-300 group-hover:text-white transition-colors">
+                    <div className="border-b border-white/10 px-2 py-2 transition-colors hover:border-white/30 h-full flex items-center">
+                      <h3 className="font-heading text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">
                         {industry.title}
                       </h3>
                     </div>

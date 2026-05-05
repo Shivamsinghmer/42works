@@ -56,9 +56,9 @@ const pillars = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: "AI & Web3 Platform Methodology",
+    title: "AI Opportunity Discovery",
     description:
-      "Built on pre-configured, secure, scalable, and fully customized agents and smart contracts, our platform is designed to help organizations transform complex business challenges into production-ready AI & Web3 solutions.",
+      "We audit your existing digital and software stack — not your AI — to uncover where AI can create the most value. From workflow automation to intelligent products, we map every opportunity before a line of code is written.",
   },
   {
     icon: (
@@ -109,9 +109,9 @@ export function FundamentalsSection() {
               Toward Possibilities
             </h2>
             <p className="mx-auto max-w-2xl text-base leading-relaxed text-slate-600">
-              We don&apos;t just audit — we uncover. Fusing deep compliance expertise, engineering,
-              and AI & Web3, we identify every risk and then build what&apos;s
-              next. This isn&apos;t about products. This is about competitive advantage.
+              We audit your current digital operations to discover where AI can drive real impact —
+              then we build it. From workflow automation to intelligent products,
+              this isn&apos;t about patching inefficiencies. This is about competitive advantage.
             </p>
             <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 md:gap-3">
               {highlights.map((item) => (
@@ -156,7 +156,7 @@ export function FundamentalsSection() {
           </div>
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.1)_0%,transparent_58%)]" />
 
-          <div className="absolute left-1/2 top-7 z-10 -translate-x-1/2 md:top-8">
+          <div className="absolute left-1/2 top-4 z-10 -translate-x-1/2 md:top-8">
             <FloatingIcon label="AI & Web3 Powered">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
@@ -164,7 +164,7 @@ export function FundamentalsSection() {
             </FloatingIcon>
           </div>
 
-          <div className="absolute left-[17%] top-[32%] z-10">
+          <div className="absolute left-[5%] top-[48%] z-10 md:left-[17%] md:top-[32%]">
             <FloatingIcon label="Experience">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
@@ -172,7 +172,7 @@ export function FundamentalsSection() {
             </FloatingIcon>
           </div>
 
-          <div className="absolute right-[17%] top-[32%] z-10">
+          <div className="absolute right-[5%] top-[48%] z-10 md:right-[17%] md:top-[32%]">
             <FloatingIcon label="Engineering">
               <svg viewBox="0 0 24 24" className="h-5 w-5 text-indigo-500" fill="none" stroke="currentColor" strokeWidth="1.7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />

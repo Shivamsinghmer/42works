@@ -20,7 +20,10 @@ import {
   DataIcon,
   EngineeringIcon,
   ExperienceIcon,
-  CloudGroupIcon
+  CloudGroupIcon,
+  TelecomIcon,
+  FieldServiceIcon,
+  EnergyIcon
 } from "./IndustryIcons";
 
 export const CENTER_LINKS = [
@@ -38,6 +41,9 @@ export const INDUSTRIES_LINKS = [
   { label: "Hi-Tech", href: "/industries/hi-tech", icon: TechIcon, desc: "Accelerate product innovation and scale seamlessly with cutting-edge engineering and agile software practices.", image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800" },
   { label: "Automotive & Manufacturing", href: "/industries/automotive", icon: AutoIcon, desc: "Optimize supply chains and smart manufacturing with robust IoT integrations and intelligent automation systems.", image: "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&q=80&w=800" },
   { label: "Travel & Hospitality", href: "/industries/travel", icon: TravelIcon, desc: "Elevate guest experiences and operational agility with connected booking systems and data-driven personalization.", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800" },
+  { label: "Telecom", href: "/industries/telecom", icon: TelecomIcon, desc: "Empower your telecommunications infrastructure with AI and scalable automation.", image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800" },
+  { label: "Field Service Management", href: "/industries/field-service", icon: FieldServiceIcon, desc: "Optimize your on-the-ground operations and field worker efficiency with smart digital solutions.", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" },
+  { label: "Energy", href: "/industries/energy", icon: EnergyIcon, desc: "Modernize energy systems and drive sustainability with data-driven operations.", image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800" },
 ];
 
 export const SERVICE_GROUPS = [

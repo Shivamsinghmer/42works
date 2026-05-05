@@ -294,7 +294,7 @@ export default function AboutPage() {
               <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-bold text-slate-900">Meet Our Leadership</h2>
             </div>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto justify-items-center w-full">
              {[
                { 
                  name: "Harsimran Singh", 
@@ -312,12 +312,13 @@ export default function AboutPage() {
                  oneLiner: "Product Strategy leader and Web3/AI infrastructure builder.",
                  fullInfo: "With an early career exit, Akshat led Product Strategy for Softbank-funded Snapdeal and multiple SaaS platforms before moving to Web3. He builds exchanges, vaults, and RWA platforms, ensures VARA/MiCA compliance, and is a major proponent of Coinbase's x402 micropayments for autonomous AI agents."
                },
-               { 
-                 name: "Team of Developers", 
-                 role: "Engineering & Experience", 
-                 edu: "Global Talent",
-                 oneLiner: "World-class engineers shipping code that matters.",
-                 fullInfo: "Our distributed team of senior developers, AI & Web3 specialists, and experience designers bring diverse expertise to every project. We operate with an agile mindset, focusing on speed, quality, and continuous innovation."
+               {
+                 name: "Shubbankar Singh",
+                 role: "AI Product Manager",
+                 edu: "Rotman MBA & JMI",
+                 image: "https://media.licdn.com/dms/image/v2/C4E03AQFyn_ZW69tMdA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1604105964478?e=1779321600&v=beta&t=4a1dIs2X7IoaHg_WTdysK2iCyDEAcs5xBPGQpKl2dS8",
+                 oneLiner: "Product Leader dedicated to moving unconventional ideas from concept to shipped product.",
+                 fullInfo: "Shubbankar specializes in 0→1 product leadership and AI innovation. At Telus, he managed an $8M innovation fund, running rigorous validation programs that drove 40+ projects annually and delivered over 4X ROI. At Wavelo Labs, he established an agile AI cadence and led cross-functional teams in shipping advanced proof-of-concepts to AWS. He excels at evaluating ambitious bets, driving product inception, and acting as a full-stack builder to launch solutions that transform business processes."
                }
              ].map((person, i) => (
                <Reveal key={person.name} delay={i * 0.05} className="flex h-full w-full">
@@ -328,7 +329,9 @@ export default function AboutPage() {
                    oneLiner={person.oneLiner}
                    src={person.image || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"} 
                  >
-                   <p>{person.fullInfo}</p>
+                   <div className="text-slate-600 leading-relaxed text-sm">
+                     {typeof person.fullInfo === 'string' ? <p>{person.fullInfo}</p> : person.fullInfo}
+                   </div>
                  </ExpandableCard>
                </Reveal>
              ))}

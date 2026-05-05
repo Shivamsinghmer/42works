@@ -18,30 +18,56 @@ export function ExpandableCard({
   const [active, setActive] = React.useState(false);
   const id = React.useId();
 
+  React.useEffect(() => {
+    if (active) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [active]);
+
   return (
-    <div 
-      className="relative flex w-full max-w-[400px] flex-col items-center"
-      onMouseEnter={() => setActive(true)}
-      onMouseLeave={() => setActive(false)}
-    >
+    <>
       <AnimatePresence>
         {active && (
-          <div className="fixed inset-0 z-[100] grid place-items-center pointer-events-none sm:mt-8 px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActive(false)}
+            className="fixed inset-0 z-[90] bg-slate-900/40 backdrop-blur-sm cursor-pointer"
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {active && (
+          <div className="fixed inset-0 z-[100] grid place-items-center pointer-events-none p-4 sm:p-0">
             <motion.div
               layoutId={`card-${title}-${id}`}
               data-lenis-prevent="true"
               className={cn(
-                "w-full max-w-[550px] max-h-[85vh] flex flex-col overflow-y-auto overflow-x-hidden sm:rounded-[2rem] bg-white shadow-2xl relative pointer-events-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
+                "w-full max-w-[550px] max-h-[90vh] flex flex-col overflow-y-auto overflow-x-hidden rounded-[1.5rem] sm:rounded-[2rem] bg-white shadow-2xl relative pointer-events-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
                 classNameExpanded,
               )}
               {...props}
             >
+              <button
+                onClick={() => setActive(false)}
+                className="absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-black/60"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
               <motion.div layoutId={`image-${title}-${id}`}>
                 <div className="relative h-[250px] sm:h-[320px] w-full overflow-hidden shrink-0 bg-slate-100">
                   <img
                     src={src}
                     alt={title}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-cover sm:object-contain bg-slate-900"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-90" />
                   {badge && (
@@ -51,7 +77,7 @@ export function ExpandableCard({
                   )}
                 </div>
               </motion.div>
-              <div className="relative p-6 flex flex-col gap-2">
+              <div className="relative p-6 sm:p-8 flex flex-col gap-2">
                 <div>
                   <motion.p
                     layoutId={`description-${description}-${id}`}
@@ -91,8 +117,9 @@ export function ExpandableCard({
 
       <motion.div
         layoutId={`card-${title}-${id}`}
+        onClick={() => setActive(true)}
         className={cn(
-          "group flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-[2rem] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.06)] ring-1 ring-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)]",
+          "group flex h-full w-full max-w-[400px] cursor-pointer flex-col overflow-hidden rounded-[2rem] bg-white shadow-[0_8px_30px_rgba(15,23,42,0.06)] ring-1 ring-slate-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(79,70,229,0.12)]",
           className,
         )}
       >
@@ -133,6 +160,6 @@ export function ExpandableCard({
           )}
         </div>
       </motion.div>
-    </div>
+    </>
   );
 }

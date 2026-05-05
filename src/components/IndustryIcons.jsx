@@ -101,3 +101,23 @@ export const CloudGroupIcon = ({ className }) => (
     <circle cx="12" cy="13" r="2" fill="#6ee7b7" stroke="currentColor" strokeWidth="1.5"/>
   </svg>
 );
+
+export const TelecomIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M4 15V9C4 4.58172 7.58172 1 12 1C16.4183 1 20 4.58172 20 9V15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M2 15C2 12.7909 3.79086 11 6 11C8.20914 11 10 12.7909 10 15V21C10 22.1046 9.10457 23 8 23H4C2.89543 23 2 22.1046 2 21V15Z" stroke="currentColor" strokeWidth="1.5"/>
+    <path d="M14 15C14 12.7909 15.7909 11 18 11C20.2091 11 22 12.7909 22 15V21C22 22.1046 21.1046 23 20 23H16C14.8954 23 14 22.1046 14 21V15Z" stroke="currentColor" strokeWidth="1.5"/>
+  </svg>
+);
+
+export const FieldServiceIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+export const EnergyIcon = ({ className }) => (
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
